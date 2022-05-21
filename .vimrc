@@ -1,0 +1,11 @@
+set nu
+set autoindent
+set ts=4
+set sts=4
+set cindent
+set shiftwidth=4
+set showmatch
+set smartcase
+set smarttab
+set smartindent
+set fileencodings=utf8,euc-kr
