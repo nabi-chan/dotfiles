@@ -4,6 +4,7 @@
 	signingkey = 4D070A693785CC6C0DE4A3AC003A8154E6FFF6CA
 [core]
 	excludesFile = ~/.gitignore
+	ignorecase = true
 [tag]
 	forceSignAnnotated = true
 [init]
