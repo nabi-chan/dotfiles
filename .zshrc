@@ -1,3 +1,6 @@
+# set path
+eval $(/opt/homebrew/bin/brew shellenv)
+
 # .zshrc (use zplug)
 export ZPLUG_HOME=$(brew --prefix)/opt/zplug
 source $ZPLUG_HOME/init.zsh
@@ -38,9 +41,6 @@ alias git='/opt/homebrew/bin/git'
 alias gp='git push'
 alias gc='git commit'
 alias ga='git add'
-
-# set path
-eval $(/opt/homebrew/bin/brew shellenv)
 
 # pnpm
 export PNPM_HOME="/Users/$(whoami)/Library/pnpm"
