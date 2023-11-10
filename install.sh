@@ -13,6 +13,8 @@ brew install pyenv
 echo "Installing optional"
 brew install gh
 brew install tree
+brew install wget
+brew install mas
 
 echo "Installing apps"
 brew install --cask iterm2
@@ -23,6 +25,7 @@ brew install --cask notion
 brew install --cask docker
 brew install --cask paw
 brew install --cask tower
+mas install 441258766
 
 echo "Installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
