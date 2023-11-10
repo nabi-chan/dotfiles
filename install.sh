@@ -38,6 +38,7 @@ npm install -g pnpm
 
 echo "Move files"
 ln -s -f "$(pwd)/.zshrc" ~/.zshrc
+touch ~/.zshrc.local
 ln -s -f "$(pwd)/.vimrc" ~/.vimrc
 ln -s -f "$(pwd)/.gitconfig" ~/.gitconfig
 ln -s -f "$(pwd)/.gitignore" ~/.gitignore

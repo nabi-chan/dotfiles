@@ -18,4 +18,6 @@ Temporary Items
 
 # env
 .env
-.env*.local
+
+# local files
+*.local

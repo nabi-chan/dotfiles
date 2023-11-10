@@ -1,3 +1,6 @@
+# get local zsh config
+source ~/.zshrc.local
+
 # set path
 eval $(/opt/homebrew/bin/brew shellenv)
 
