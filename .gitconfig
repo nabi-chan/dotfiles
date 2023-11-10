@@ -10,7 +10,7 @@
 [init]
 	defaultBranch = main
 [gpg]
-	program = gpg
+	program = /opt/homebrew/bin/gpg
 [commit]
 	gpgsign = true
 [push]
