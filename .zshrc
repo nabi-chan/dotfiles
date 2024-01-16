@@ -1,8 +1,12 @@
 # get local zsh config
 source ~/.zshrc.local
 
-# set path
-eval $(/opt/homebrew/bin/brew shellenv)
+# set homebrew path
+if [ "$(arch)" = "arm64" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
 
 # .zshrc (use zplug)
 export ZPLUG_HOME=$(brew --prefix)/opt/zplug
