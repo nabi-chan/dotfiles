@@ -8,6 +8,7 @@ brew install zplug
 brew install exa
 brew install pygments
 brew install git
+brew install pyenv
 
 echo "Installing optional"
 brew install gh
@@ -31,6 +32,9 @@ export NVM_DIR="$HOME/.nvm"
 
 echo "Installing node 18"
 nvm install 18
+
+echo "Installing python 2.7"
+pyenv install 2.7.18
 
 echo "Install yarn / pnpm"
 npm install -g yarn

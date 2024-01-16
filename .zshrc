@@ -45,6 +45,9 @@ alias gp='git push'
 alias gc='git commit'
 alias ga='git add'
 
+# set pyenv path
+export PATH=$(pyenv root)/shims:$PATH
+
 # pnpm
 export PNPM_HOME="/Users/$(whoami)/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
