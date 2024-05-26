@@ -51,9 +51,6 @@ export PATH=$(pyenv root)/shims:$PATH
 
 # pnpm
 export PNPM_HOME="/Users/$(whoami)/Library/pnpm"
-<<<<<<< HEAD
-export PATH="$PNPM_HOME:$PATH"
-=======
 export PATH="$PNPM_HOME:$PATH"
 
 # bun completions
@@ -65,4 +62,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # for warp
 export SPACESHIP_PROMPT_ASYNC=FALSE
->>>>>>> 3dfd294 (chore: update apps, node version, gitconfig)
