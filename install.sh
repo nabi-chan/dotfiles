@@ -23,6 +23,8 @@ brew install --cask notion
 brew install --cask docker
 brew install --cask warp
 brew install --cask raycast
+brew install --cask figma
+brew install --cask ngrok
 
 echo "Installing Mac App Store apps"
 mas install 441258766
