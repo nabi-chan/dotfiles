@@ -15,6 +15,7 @@ brew install gh
 brew install tree
 brew install wget
 brew install mas
+brew install jesseduffield/lazygit/lazygit
 
 echo "Installing apps"
 brew install --cask visual-studio-code
