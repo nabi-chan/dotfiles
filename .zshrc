@@ -22,7 +22,6 @@ zplug "lib/directories",  from:oh-my-zsh
 
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting"
 
 zplug "lukechilds/zsh-nvm"
 
@@ -43,15 +42,27 @@ zplug load
 alias cat='pygmentize -g'
 alias ls='exa'
 alias gpc='gh pr create'
+alias gpv='gh pr view'
 alias gpm='gh pr merge && git pull --ff-only'
 alias git='/opt/homebrew/bin/git'
-alias gp='git push'
-alias gc='git commit'
-alias ga='git add'
 
 # set pyenv path
 export PATH=$(pyenv root)/shims:$PATH
 
 # pnpm
 export PNPM_HOME="/Users/$(whoami)/Library/pnpm"
+<<<<<<< HEAD
 export PATH="$PNPM_HOME:$PATH"
+=======
+export PATH="$PNPM_HOME:$PATH"
+
+# bun completions
+[ -s "/Users/$(whoami)/.bun/_bun" ] && source "/Users/$(whoami)/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# for warp
+export SPACESHIP_PROMPT_ASYNC=FALSE
+>>>>>>> 3dfd294 (chore: update apps, node version, gitconfig)
