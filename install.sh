@@ -19,16 +19,21 @@ brew install mas
 echo "Installing apps"
 brew install --cask visual-studio-code
 brew install --cask google-chrome
-brew install --cask notion
 brew install --cask docker
 brew install --cask warp
 brew install --cask raycast
 brew install --cask figma
 brew install --cask ngrok
+brew install --cask tunnelbear
+brew install --cask notion
+brew install --cask notion-calendar
+brew install --cask 1password
 
 echo "Installing Mac App Store apps"
 mas install 441258766
 mas install 869223134
+mas install 497799835
+mas install 1265704574
 
 echo "Installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
