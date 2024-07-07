@@ -15,7 +15,7 @@ brew install eza
 brew install pygments
 brew install git
 brew install pyenv
-
+brew install gnupg
 brew install gh
 brew install tree
 brew install wget
