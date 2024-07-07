@@ -71,6 +71,7 @@ ln -s -f "$(pwd)/.zshrc" ~/.zshrc
 ln -s -f "$(pwd)/.vimrc" ~/.vimrc
 ln -s -f "$(pwd)/.gitconfig" ~/.gitconfig
 ln -s -f "$(pwd)/.gitignore" ~/.gitignore
+ln -s -f "$(pwd)/lazygit-config.yml" ~/Library/Application\ Support/lazygit/config.yml
 
 echo "Init zsh"
 source ~/.zshrc
