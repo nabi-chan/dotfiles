@@ -3,27 +3,26 @@
 echo "Installing Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-echo "Installing requriment"
 if [ "$(arch)" = "arm64" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 else
     eval "$(/usr/local/bin/brew shellenv)"
 fi
 
+echo "Installing shell programs with brew"
 brew install zplug
 brew install eza
 brew install pygments
 brew install git
 brew install pyenv
 
-echo "Installing optional"
 brew install gh
 brew install tree
 brew install wget
 brew install mas
 brew install jesseduffield/lazygit/lazygit
 
-echo "Installing apps"
+echo "Installing programs with brew --cask"
 brew install --cask visual-studio-code
 brew install --cask google-chrome
 brew install --cask docker
@@ -48,7 +47,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-echo "Installing node 18"
+echo "Installing node 22"
 nvm install 22
 
 echo "Installing python 2.7"
