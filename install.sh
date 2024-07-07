@@ -35,6 +35,11 @@ brew install --cask notion
 brew install --cask notion-calendar
 brew install --cask 1password
 
+echo "Install Font"
+brew install --cask font-jetbrains-mono
+brew install --cask font-hack-nerd-font
+brew install --cask font-pretendard
+
 echo "Installing Mac App Store apps"
 mas install 441258766
 mas install 869223134
