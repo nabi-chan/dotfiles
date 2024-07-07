@@ -40,7 +40,7 @@ zplug load
 
 # set alias
 alias cat='pygmentize -g'
-alias ls='exa'
+alias ls='eza'
 alias gpc='gh pr create'
 alias gpv='gh pr view'
 alias gpm='gh pr merge && git pull --ff-only'

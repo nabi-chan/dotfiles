@@ -5,7 +5,7 @@ echo "Installing Homebrew"
 
 echo "Installing requriment"
 brew install zplug
-brew install exa
+brew install eza
 brew install pygments
 brew install git
 brew install pyenv
