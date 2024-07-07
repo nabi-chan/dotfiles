@@ -58,7 +58,7 @@ npm install -g yarn
 npm install -g pnpm
 
 echo "Install bun"
-curl -fsSL https://bun.sh/install | zsh
+curl -fsSL https://bun.sh/install | bash
 
 echo "Move files"
 touch ~/.zshrc.local
