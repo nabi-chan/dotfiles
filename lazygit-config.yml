@@ -3,7 +3,7 @@ gui:
   mouseEvents: false
 
 git:
-  overrideGpg: false
+  overrideGpg: true
 
 os:
   editPreset: "vscode"
