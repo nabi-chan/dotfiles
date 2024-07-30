@@ -63,3 +63,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # for warp
 export SPACESHIP_PROMPT_ASYNC=FALSE
+printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
