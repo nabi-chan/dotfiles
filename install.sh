@@ -25,7 +25,7 @@ brew install jesseduffield/lazygit/lazygit
 echo "Installing programs with brew --cask"
 brew install --cask visual-studio-code
 brew install --cask google-chrome
-brew install --cask docker
+brew install --cask orbstack
 brew install --cask warp
 brew install --cask raycast
 brew install --cask figma
@@ -34,6 +34,7 @@ brew install --cask tunnelbear
 brew install --cask notion
 brew install --cask notion-calendar
 brew install --cask 1password
+brew install --cask utm
 
 echo "Install Font"
 brew install --cask font-jetbrains-mono
@@ -41,11 +42,13 @@ brew install --cask font-hack-nerd-font
 brew install --cask font-pretendard
 
 echo "Installing Mac App Store apps"
-mas install 441258766
-mas install 869223134
-mas install 497799835
-mas install 1265704574
-mas install 1519867270
+mas install 441258766 # Magnet
+mas install 869223134 # KakaoTalk
+mas install 497799835 # Xcode
+mas install 1265704574 # Bandizip
+mas install 1519867270 # Refined Github
+mas install 1231935892 # Unicorn Ad Blocker
+mas install 1569813296 # 1Password for safari
 
 echo "Installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
