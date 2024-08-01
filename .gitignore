@@ -21,3 +21,7 @@ Temporary Items
 
 # local files
 *.local
+
+# corepack
+node_modules/.yarn-integrity
+yarn.lock

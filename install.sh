@@ -62,9 +62,10 @@ nvm install 22
 echo "Installing python 2.7"
 pyenv install 2.7.18
 
-echo "Install yarn / pnpm"
-npm install -g yarn
-npm install -g pnpm
+echo "Enable corepack for yarn"
+corepack enable
+yarn -v
+pnpm -v
 
 echo "Install bun"
 curl -fsSL https://bun.sh/install | bash
