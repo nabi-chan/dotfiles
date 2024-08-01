@@ -45,6 +45,7 @@ mas install 441258766
 mas install 869223134
 mas install 497799835
 mas install 1265704574
+mas install 1519867270
 
 echo "Installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
