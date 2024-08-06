@@ -23,6 +23,7 @@ brew install mas
 brew install jesseduffield/lazygit/lazygit
 
 echo "Installing programs with brew --cask"
+brew install --cask 1password
 brew install --cask visual-studio-code
 brew install --cask google-chrome
 brew install --cask orbstack
@@ -33,7 +34,6 @@ brew install --cask ngrok
 brew install --cask tunnelbear
 brew install --cask notion
 brew install --cask notion-calendar
-brew install --cask 1password
 brew install --cask utm
 
 echo "Install Font"
