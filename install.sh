@@ -35,6 +35,7 @@ brew install --cask tunnelbear
 brew install --cask notion
 brew install --cask notion-calendar
 brew install --cask utm
+brew install --cask httpie
 
 echo "Install Font"
 brew install --cask font-jetbrains-mono
