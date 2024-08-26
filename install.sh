@@ -21,6 +21,7 @@ brew install tree
 brew install wget
 brew install mas
 brew install jesseduffield/lazygit/lazygit
+brew install cloudflared
 
 echo "Installing programs with brew --cask"
 brew install --cask 1password
@@ -77,6 +78,7 @@ ln -s -f "$(pwd)/.zshrc" ~/.zshrc
 ln -s -f "$(pwd)/.vimrc" ~/.vimrc
 ln -s -f "$(pwd)/.gitconfig" ~/.gitconfig
 ln -s -f "$(pwd)/.gitignore" ~/.gitignore
+ln -s -f "$(pwd)/.ssh-config" ~/.ssh/config
 ln -s -f "$(pwd)/lazygit-config.yml" ~/Library/Application\ Support/lazygit/config.yml
 
 echo "Init zsh"

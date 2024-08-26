@@ -1,0 +1,10 @@
+# orbstack
+Include ~/.orbstack/ssh/config
+
+# cloudflared
+Host server.nabi.kim
+    ProxyCommand /opt/homebrew/bin/cloudflared access ssh --hostname %h
+
+# 1password
+Host *
+	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
