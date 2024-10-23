@@ -1,4 +1,4 @@
-# DOTFILES
+# nabi-dotfiles
 
 ## how to install
 
