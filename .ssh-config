@@ -2,8 +2,10 @@
 Include ~/.orbstack/ssh/config
 
 # cloudflared
-Host server.nabi.kim
+Host *.nabi.kim
     ProxyCommand /opt/homebrew/bin/cloudflared access ssh --hostname %h
+Host *.cat-hou.se
+	ProxyCommand /opt/homebrew/bin/cloudflared access ssh --hostname %h
 
 # 1password
 Host *
