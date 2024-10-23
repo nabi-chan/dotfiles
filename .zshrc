@@ -46,6 +46,7 @@ alias gpv='gh pr view'
 alias gpm='gh pr merge && git pull --ff-only'
 alias git='/opt/homebrew/bin/git'
 alias lg='lazygit'
+alias dig='doggo'
 
 # set pyenv path
 export PATH=$(pyenv root)/shims:$PATH

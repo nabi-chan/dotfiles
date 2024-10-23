@@ -13,6 +13,8 @@ fi
 
 echo "Installing shell programs with brew"
 brew install zplug
+brew install bat
+brew install doggo
 brew install eza
 brew install pygments
 brew install git
@@ -42,6 +44,7 @@ brew install --cask notion
 brew install --cask notion-calendar
 brew install --cask utm
 brew install --cask httpie
+brew link httpie
 brew install --cask linear
 brew install --cask datagrip
 brew install --cask hancom-word
