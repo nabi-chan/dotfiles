@@ -23,8 +23,7 @@ zplug "lib/directories",  from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 
-zplug "lukechilds/zsh-nvm"
-
+zplug 'plugins/nvm',      from:oh-my-zsh, hook-build:'zstyle ":omz:plugins:nvm" silent-autoload yes'
 zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 # Install plugins if there are plugins that have not been installed
