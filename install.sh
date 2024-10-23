@@ -24,6 +24,9 @@ brew install wget
 brew install mas
 brew install jesseduffield/lazygit/lazygit
 brew install cloudflared
+brew install awscli
+brew install openjdk@17
+brew install 1password-cli
 
 echo "Installing programs with brew --cask"
 brew install --cask 1password
@@ -40,6 +43,9 @@ brew install --cask notion-calendar
 brew install --cask utm
 brew install --cask httpie
 brew install --cask linear
+brew install --cask datagrip
+brew install --cask hancom-word
+brew install --cask pritunl
 
 echo "Install Font"
 brew install --cask font-jetbrains-mono
@@ -54,6 +60,11 @@ mas install 1265704574 # Bandizip
 mas install 1519867270 # Refined Github
 mas install 1231935892 # Unicorn Ad Blocker
 mas install 1569813296 # 1Password for safari
+mas install 1276493162 # reMarkable
+mas install 1102655071 # Channel Talk
+mas install 409201541 # Pages
+mas install 409203825 # Numbers
+mas install 409183694 # Keynote
 
 echo "Installing KakaoTalk For Work"
 sudo ./scripts/kakaotalk-for-work.sh
