@@ -1,5 +1,7 @@
 #/bin/bash
 
+sudo -v
+
 echo "Installing Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -52,6 +54,15 @@ mas install 1265704574 # Bandizip
 mas install 1519867270 # Refined Github
 mas install 1231935892 # Unicorn Ad Blocker
 mas install 1569813296 # 1Password for safari
+
+echo "Installing KakaoTalk For Work"
+sudo ./scripts/kakaotalk-for-work.sh
+
+SCRIPT_PATH="$(pwd)/scripts/kakaotalk-for-work.sh"
+crontab -l 2>/dev/null | grep -F "$SCRIPT_PATH" > /dev/null
+if [ $? -ne 0 ]; then
+    (crontab -l 2>/dev/null; echo "0 0 * * * $SCRIPT_PATH") | crontab -
+fi
 
 echo "Installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
