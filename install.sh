@@ -72,12 +72,6 @@ mas install 409183694 # Keynote
 echo "Installing KakaoTalk For Work"
 sudo ./scripts/kakaotalk-for-work.sh
 
-SCRIPT_PATH="$(pwd)/scripts/kakaotalk-for-work.sh"
-crontab -l 2>/dev/null | grep -F "$SCRIPT_PATH" > /dev/null
-if [ $? -ne 0 ]; then
-    (crontab -l 2>/dev/null; echo "0 0 * * * $SCRIPT_PATH") | crontab -
-fi
-
 echo "Installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
