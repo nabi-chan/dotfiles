@@ -49,6 +49,10 @@ alias dig='doggo'
 # set pyenv path
 export PATH=$(pyenv root)/shims:$PATH
 
+# set jabba path
+export JABBA_HOME="$HOME/.jabba"
+[ -s "$JABBA_HOME/jabba.sh" ] && source "$JABBA_HOME/jabba.sh"
+
 # pnpm
 export PNPM_HOME="/Users/$(whoami)/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
