@@ -27,7 +27,7 @@ brew install mas
 brew install jesseduffield/lazygit/lazygit
 brew install cloudflared
 brew install awscli
-brew install openjdk@17
+brew install jabba
 brew install 1password-cli
 
 echo "Installing programs with brew --cask"
@@ -89,6 +89,10 @@ nvm install 22
 
 echo "Installing python 2.7"
 pyenv install 2.7.18
+
+echo "Installing java 8"
+jabba install zulu@8
+jabba alias default zulu@8
 
 echo "Enable corepack for yarn"
 corepack enable
