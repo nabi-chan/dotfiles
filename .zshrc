@@ -43,7 +43,6 @@ alias ls='eza'
 alias gpc='gh pr create'
 alias gpv='gh pr view'
 alias gpm='gh pr merge && git pull --ff-only'
-alias git='/opt/homebrew/bin/git'
 alias lg='lazygit'
 alias dig='doggo'
 
