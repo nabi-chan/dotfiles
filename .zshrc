@@ -8,6 +8,12 @@ else
     eval "$(/usr/local/bin/brew shellenv)"
 fi
 
+# mise
+eval "$($(brew --prefix)/bin/mise activate zsh)"
+
+# pulumi
+eval $(pulumi gen-completion zsh)
+
 # .zshrc (use zplug)
 export ZPLUG_HOME=$(brew --prefix)/opt/zplug
 source $ZPLUG_HOME/init.zsh
@@ -23,7 +29,6 @@ zplug "lib/directories",  from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 
-zplug 'plugins/nvm',      from:oh-my-zsh, hook-build:'zstyle ":omz:plugins:nvm" silent-autoload yes'
 zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 # Install plugins if there are plugins that have not been installed
@@ -45,13 +50,6 @@ alias gpv='gh pr view'
 alias gpm='gh pr merge && git pull --ff-only'
 alias lg='lazygit'
 alias dig='doggo'
-
-# set pyenv path
-export PATH=$(pyenv root)/shims:$PATH
-
-# set jabba path
-export JABBA_HOME="$HOME/.jabba"
-[ -s "$JABBA_HOME/jabba.sh" ] && source "$JABBA_HOME/jabba.sh"
 
 # pnpm
 export PNPM_HOME="/Users/$(whoami)/Library/pnpm"

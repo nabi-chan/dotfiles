@@ -27,13 +27,18 @@ brew install mas
 brew install jesseduffield/lazygit/lazygit
 brew install cloudflared
 brew install awscli
-brew install jabba
+brew install mise
 brew install 1password-cli
+brew install k9s
+brew install pulumi
+brew install terraform
 
 echo "Installing programs with brew --cask"
 brew install --cask 1password
 brew install --cask cursor
 brew install --cask google-chrome
+brew install --cask google-drive
+brew install --cask discord
 brew install --cask datagrip
 brew install --cask intellij-idea
 brew install --cask orbstack
@@ -76,22 +81,22 @@ mas install 1023251042 # 알라딘 eBook
 echo "Installing KakaoTalk For Work"
 sudo ./scripts/kakaotalk-for-work.sh
 
-echo "Installing nvm"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
+# node
 echo "Installing node 22"
-nvm install 22
+mise install node@22
+mise use -g node@22
 
-echo "Installing python 2.7"
-pyenv install 2.7.18
+# python
+echo "Installing python 2.7.18"
+mise install python@2.7.18
+mise use -g python@2.7.18
 
-echo "Installing java 8"
-jabba install zulu@8
-jabba alias default zulu@8
+# java
+mise install java@zulu-8
+mise install java@zulu-23
+mise use -g java@zulu-23
 
+# corepack
 echo "Enable corepack for yarn"
 corepack enable
 yarn -v
