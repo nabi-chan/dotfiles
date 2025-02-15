@@ -18,6 +18,10 @@ eval $(pulumi gen-completion zsh)
 export ZPLUG_HOME=$(brew --prefix)/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+# dotfiles
+export ZSH_DOTENV_FILE='.env.local'
+export ZSH_DOTENV_PROMPT=false
+
 # Plugins
 zplug "plugins/1password",      from:oh-my-zsh
 zplug "plugins/git",            from:oh-my-zsh
@@ -26,6 +30,7 @@ zplug "plugins/docker",         from:oh-my-zsh
 zplug "plugins/mise",           from:oh-my-zsh
 zplug "plugins/gh",             from:oh-my-zsh
 zplug "plugins/httpie",         from:oh-my-zsh
+zplug "plugins/dotenv",         from:oh-my-zsh
 zplug "lib/completion",         from:oh-my-zsh
 zplug 'lib/key-bindings',       from:oh-my-zsh
 zplug "lib/directories",        from:oh-my-zsh
