@@ -111,6 +111,7 @@ ln -s -f "$(pwd)/.zshrc" ~/.zshrc
 ln -s -f "$(pwd)/.vimrc" ~/.vimrc
 ln -s -f "$(pwd)/.gitconfig" ~/.gitconfig
 ln -s -f "$(pwd)/.gitignore" ~/.gitignore
+touch ~/.ssh/config.local
 ln -s -f "$(pwd)/.ssh-config" ~/.ssh/config
 ln -s -f "$(pwd)/lazygit-config.yml" ~/Library/Application\ Support/lazygit/config.yml
 
