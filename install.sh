@@ -36,7 +36,7 @@ brew install watchman
 
 echo "Installing programs with brew --cask"
 brew install --cask 1password
-brew install --cask cursor
+brew install --cask zed
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask discord
@@ -115,6 +115,8 @@ ln -s -f "$(pwd)/.gitignore" ~/.gitignore
 touch ~/.ssh/config.local
 ln -s -f "$(pwd)/.ssh-config" ~/.ssh/config
 ln -s -f "$(pwd)/lazygit-config.yml" ~/Library/Application\ Support/lazygit/config.yml
+touch ~/.config/zed/settings.json
+ln -s -f "$(pwd)/zed-settings.json" ~/.config/zed/settings.json
 
 echo "Init zsh"
 source ~/.zshrc

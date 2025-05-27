@@ -1,0 +1,36 @@
+{
+  "restore_on_startup": "none",
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "agent": {
+    "version": "2",
+    "always_allow_tool_actions": false,
+    "model_parameters": [],
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-thinking-latest"
+    }
+  },
+  "icon_theme": "Catppuccin Macchiato",
+  "base_keymap": "VSCode",
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "ui_font_size": 16,
+  "buffer_font_family": "Hack Nerd Font Mono",
+  "buffer_font_size": null,
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Frappé",
+    "dark": "Catppuccin Frappé"
+  },
+  "tabs": {
+    "file_icons": true
+  },
+  "terminal": {
+    "default_height": 720,
+    "line_height": "standard"
+  }
+}
