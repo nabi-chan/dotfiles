@@ -114,9 +114,8 @@ ln -s -f "$(pwd)/.gitconfig" ~/.gitconfig
 ln -s -f "$(pwd)/.gitignore" ~/.gitignore
 touch ~/.ssh/config.local
 ln -s -f "$(pwd)/.ssh-config" ~/.ssh/config
-ln -s -f "$(pwd)/lazygit-config.yml" ~/Library/Application\ Support/lazygit/config.yml
-touch ~/.config/zed/settings.json
-ln -s -f "$(pwd)/zed-settings.json" ~/.config/zed/settings.json
+ln -s -f "$(pwd)/app-configs/lazygit.yml" ~/Library/Application\ Support/lazygit/config.yml
+ln -s -f "$(pwd)/app-configs/zed.json" ~/.config/zed/settings.json
 
 echo "Init zsh"
 source ~/.zshrc
