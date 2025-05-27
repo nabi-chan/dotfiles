@@ -35,6 +35,8 @@ zplug "lib/completion",         from:oh-my-zsh
 zplug 'lib/key-bindings',       from:oh-my-zsh
 zplug "lib/directories",        from:oh-my-zsh
 
+zplug "usami-k/zsh-android-sdk"
+
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 

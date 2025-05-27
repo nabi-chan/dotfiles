@@ -32,6 +32,7 @@ brew install 1password-cli
 brew install k9s
 brew install pulumi
 brew install terraform
+brew install watchman
 
 echo "Installing programs with brew --cask"
 brew install --cask 1password
