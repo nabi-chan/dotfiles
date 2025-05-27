@@ -1,0 +1,16 @@
+#!/usr/bin/env just --justfile
+justfile := justfile()
+
+_list:
+  #!/usr/bin/env bash
+  if command -v fzf &>/dev/null; then
+    just --choose --justfile {{justfile}}
+  else
+    just --list --justfile {{justfile}}
+  fi
+
+kill-ios-simulator:
+  sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService
+
+ip:
+  curl https://ipinfo.io/ | yq -P -oy .

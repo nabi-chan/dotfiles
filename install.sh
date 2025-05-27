@@ -33,6 +33,9 @@ brew install k9s
 brew install pulumi
 brew install terraform
 brew install watchman
+brew install gum
+brew install just
+brew install yq
 
 echo "Installing programs with brew --cask"
 brew install --cask 1password
@@ -116,6 +119,7 @@ touch ~/.ssh/config.local
 ln -s -f "$(pwd)/.ssh-config" ~/.ssh/config
 ln -s -f "$(pwd)/app-configs/lazygit.yml" ~/Library/Application\ Support/lazygit/config.yml
 ln -s -f "$(pwd)/app-configs/zed.json" ~/.config/zed/settings.json
+ln -s -f "$(pwd)/app-configs/justfile" ~/.config/just/justfile
 
 echo "Init zsh"
 source ~/.zshrc
