@@ -1,36 +1,65 @@
 {
-  "restore_on_startup": "none",
-  "features": {
-    "edit_prediction_provider": "zed"
+  "languages": {
+    "Markdown": {
+      "show_edit_predictions": false
+    }
   },
   "agent": {
     "version": "2",
-    "always_allow_tool_actions": false,
-    "model_parameters": [],
+    "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-thinking-latest"
-    }
+      "model": "claude-3-7-sonnet-latest",
+      "provider": "anthropic"
+    },
+    "default_profile": "write",
+    "play_sound_when_agent_done": true
   },
-  "icon_theme": "Catppuccin Macchiato",
-  "base_keymap": "VSCode",
-  "telemetry": {
-    "metrics": false,
-    "diagnostics": false
-  },
-  "ui_font_size": 16,
+  "base_keymap": "JetBrains",
   "buffer_font_family": "Hack Nerd Font Mono",
   "buffer_font_size": null,
-  "theme": {
-    "mode": "system",
-    "light": "Catppuccin Frappé",
-    "dark": "Catppuccin Frappé"
+  "code_actions_on_format": {
+    "source.fixAll.eslint": true
   },
+  "context_servers": {
+    "figma": {
+      "enabled": true,
+      "source": "custom",
+      "command": {
+        "path": "npx",
+        "args": ["-y", "mcp-remote", "http://127.0.0.1:3845/sse"],
+        "env": {}
+      }
+    }
+  },
+  "confirm_quit": true,
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "format_on_save": "on",
+  "formatter": "prettier",
+  "icon_theme": "Catppuccin Macchiato",
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "classFunctions": ["cva", "cx", "cn"]
+      }
+    }
+  },
+  "restore_on_startup": "last_workspace",
   "tabs": {
     "file_icons": true
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
   },
   "terminal": {
     "default_height": 720,
     "line_height": "standard"
+  },
+  "theme": {
+    "dark": "Catppuccin Frappé",
+    "light": "Catppuccin Frappé",
+    "mode": "system"
   }
 }
