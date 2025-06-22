@@ -6,4 +6,4 @@ git:
   overrideGpg: true
 
 os:
-  editPreset: "vscode"
+  editPreset: "zed"
