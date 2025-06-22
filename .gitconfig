@@ -24,3 +24,9 @@
 
 [http]
 	postBuffer = 524288000
+
+[remote]
+	prune = true
+
+[pull]
+	rebase = true
