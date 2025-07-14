@@ -35,8 +35,6 @@ zplug "lib/completion",         from:oh-my-zsh
 zplug 'lib/key-bindings',       from:oh-my-zsh
 zplug "lib/directories",        from:oh-my-zsh
 
-zplug "usami-k/zsh-android-sdk"
-
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 
@@ -78,3 +76,7 @@ if [ "$TERM_PROGRAM" = "WarpTerminal" ]; then
     export SPACESHIP_PROMPT_ASYNC=FALSE
     printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
 fi
+
+# android studio
+export ANDROID_HOME="/Users/$(whoami)/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
