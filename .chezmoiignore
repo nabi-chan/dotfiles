@@ -1,0 +1,12 @@
+README.md
+.git/
+
+{{- if ne .chezmoi.os "darwin" }}
+.Brewfile
+{{- end }}
+
+*.local
+
+*.bak
+*.backup
+*~

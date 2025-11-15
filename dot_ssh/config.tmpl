@@ -1,0 +1,13 @@
+# orbstack
+Include ~/.orbstack/ssh/config
+
+# local
+Include ~/.ssh/config.local
+
+# local network
+Host 192.168.0.*
+	PubkeyAuthentication no
+
+# 1password agent
+Host *
+  IdentityAgent ~/.1password/agent.sock

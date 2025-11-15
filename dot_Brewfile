@@ -1,0 +1,88 @@
+# Tap
+tap "jesseduffield/lazygit"
+
+# Brew
+brew "bat"
+brew "chezmoi"
+brew "doggo"
+brew "eza"
+brew "gh"
+brew "git"
+brew "gnupg"
+brew "gum"
+brew "just"
+brew "lazygit"
+brew "mas"
+brew "mise"
+brew "mysql-client"
+brew "pulumi"
+brew "pv"
+brew "pyenv"
+brew "pygments"
+brew "ripgrep"
+brew "tree"
+brew "uv"
+brew "wget"
+brew "yq"
+brew "zplug"
+
+# Cask
+cask "1password"
+cask "1password-cli"
+cask "adobe-acrobat-pro"
+cask "android-studio"
+cask "claude"
+cask "claude-code"
+cask "cursor"
+cask "datagrip"
+cask "discord"
+cask "figma"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-noto-sans-cjk-kr"
+cask "font-noto-sans-mono-cjk-kr"
+cask "font-pretendard"
+cask "google-chrome"
+cask "google-drive"
+cask "hancom-word"
+cask "hex-fiend"
+cask "intellij-idea"
+cask "karabiner-elements"
+cask "logi-options+"
+cask "notion"
+cask "notion-calendar"
+cask "orbstack"
+cask "raycast"
+cask "screen-studio"
+cask "slack"
+cask "utm"
+cask "warp"
+
+# Mac App Store
+mas "1Password for Safari", id: 1569813296
+mas "Channel Talk", id: 1102655071
+mas "ColorSlurp", id: 1287239339
+mas "CrystalFetch", id: 6454431289
+mas "Developer", id: 640199958
+mas "FileZilla Pro", id: 1298486723
+mas "GarageBand", id: 682658836
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Raycast Companion", id: 6738274497
+mas "Refined GitHub", id: 1519867270
+mas "reMarkable", id: 1276493162
+mas "Transporter", id: 1450874784
+mas "Windows App", id: 1295203466
+mas "WireGuard", id: 1451685025
+mas "Xcode", id: 497799835
+mas "반디집", id: 1265704574
+mas "유니콘", id: 1231935892
+mas "카카오톡", id: 869223134
+mas "카카오톡 (업무)", id: 869223134
+
+# VSCode
+vscode "anthropic.claude-code"

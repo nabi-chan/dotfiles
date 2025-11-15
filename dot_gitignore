@@ -24,4 +24,6 @@ Temporary Items
 
 # corepack
 node_modules/.yarn-integrity
-yarn.lock
+
+# claude
+.claude/settings.local.json

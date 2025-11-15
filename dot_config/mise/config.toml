@@ -1,0 +1,14 @@
+[settings]
+experimental = true
+auto_install = true
+
+[tools]
+java = "zulu-23"
+node = "22"
+pnpm = "10"
+python = "2.7.18"
+go = "latest"
+bun = "latest"
+
+[hooks]
+postinstall = 'corepack enable'

@@ -1,0 +1,24 @@
+#!/usr/bin/env just --justfile
+justfile := justfile()
+
+import "database.just"
+
+_list:
+  just --list --justfile {{justfile}}
+
+big-folder:
+  du -hs */ | sort -hr | head
+
+ip:
+  curl https://ipinfo.io/ | yq -P -oy .
+
+todo:
+  rg '(TODO|FIXME)(\([^)]+\))?:'
+
+[macos]
+kill-ios-simulator:
+  sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService
+
+[macos]
+flush-dns:
+  sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
