@@ -1,8 +1,6 @@
 #!/usr/bin/env just --justfile
 justfile := justfile()
 
-import "database.just"
-
 _list:
   just --list --justfile {{justfile}}
 
