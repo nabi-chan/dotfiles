@@ -1,0 +1,48 @@
+{
+  "mcpServers": {
+    "connector-mongo": {
+      "args": ["dlx", "mongodb-mcp-server@latest"],
+      "command": "pnpm",
+      "env": {
+        "MDB_MCP_CONNECTION_STRING": "mongodb://root:root@localhost:27017"
+      }
+    },
+    "connector-mysql-local": {
+      "args": ["dlx", "@benborla29/mcp-server-mysql@2.0.3"],
+      "command": "pnpm",
+      "env": {
+        "ALLOW_DDL_OPERATION": "true",
+        "ALLOW_DELETE_OPERATION": "true",
+        "ALLOW_INSERT_OPERATION": "true",
+        "ALLOW_UPDATE_OPERATION": "true",
+        "MULTI_DB_WRITE_MODE": "true",
+        "MYSQL_DB": "",
+        "MYSQL_PASS": "1744",
+        "MYSQL_USER": "root"
+      }
+    },
+    "documentation-aws": {
+      "args": ["awslabs.aws-documentation-mcp-server@latest"],
+      "command": "uvx",
+      "env": {
+        "AWS_DOCUMENTATION_PARTITION": "aws"
+      }
+    },
+    "documentation-context-7": {
+      "args": ["dlx", "mcp-remote@latest", "https://mcp.context7.com/mcp"],
+      "command": "pnpm"
+    },
+    "documentation-shadcn": {
+      "args": ["dlx", "shadcn@latest", "mcp"],
+      "command": "pnpm"
+    },
+    "tools-figma": {
+      "args": ["dlx", "mcp-remote@latest", "http://127.0.0.1:3845/mcp"],
+      "command": "pnpm"
+    },
+    "tools-pyhub": {
+      "args": ["run", "stdio"],
+      "command": "pyhub.mcptools"
+    }
+  }
+}
