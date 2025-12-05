@@ -1,9 +1,12 @@
 # Tap
+tap "blurfx/tap"
 tap "jesseduffield/lazygit"
 
 # Brew
 brew "bat"
+brew "btop"
 brew "chezmoi"
+brew "cocoapods"
 brew "doggo"
 brew "eza"
 brew "gh"
@@ -17,7 +20,6 @@ brew "mise"
 brew "mysql-client"
 brew "pulumi"
 brew "pv"
-brew "pyenv"
 brew "pygments"
 brew "ripgrep"
 brew "tree"
@@ -45,7 +47,7 @@ cask "google-chrome"
 cask "google-drive"
 cask "hancom-word"
 cask "hex-fiend"
-cask "intellij-idea"
+cask "httpie-desktop"
 cask "karabiner-elements"
 cask "logi-options+"
 cask "notion"
@@ -53,6 +55,7 @@ cask "notion-calendar"
 cask "orbstack"
 cask "raycast"
 cask "screen-studio"
+cask "setapp"
 cask "slack"
 cask "utm"
 cask "warp"
@@ -64,17 +67,15 @@ mas "ColorSlurp", id: 1287239339
 mas "CrystalFetch", id: 6454431289
 mas "Developer", id: 640199958
 mas "FileZilla Pro", id: 1298486723
-mas "GarageBand", id: 682658836
-mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
+mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Raycast Companion", id: 6738274497
 mas "Refined GitHub", id: 1519867270
-mas "reMarkable", id: 1276493162
 mas "Transporter", id: 1450874784
 mas "Windows App", id: 1295203466
 mas "WireGuard", id: 1451685025
@@ -85,4 +86,31 @@ mas "카카오톡", id: 869223134
 mas "카카오톡 (업무)", id: 869223134
 
 # VSCode
+vscode "aaron-bond.better-comments"
 vscode "anthropic.claude-code"
+vscode "anysphere.remote-ssh"
+vscode "bradlc.vscode-tailwindcss"
+vscode "catppuccin.catppuccin-vsc"
+vscode "catppuccin.catppuccin-vsc-icons"
+vscode "dbaeumer.vscode-eslint"
+vscode "eamodio.gitlens"
+vscode "editorconfig.editorconfig"
+vscode "esbenp.prettier-vscode"
+vscode "formulahendry.auto-close-tag"
+vscode "formulahendry.auto-rename-tag"
+vscode "github.vscode-github-actions"
+vscode "github.vscode-pull-request-github"
+vscode "k--kato.intellij-idea-keybindings"
+vscode "mikestead.dotenv"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-docker"
+vscode "prisma.prisma"
+vscode "redhat.java"
+vscode "redhat.vscode-yaml"
+vscode "streetsidesoftware.code-spell-checker"
+vscode "styled-components.vscode-styled-components"
+vscode "tamasfe.even-better-toml"
+vscode "unifiedjs.vscode-mdx"
+vscode "usernamehw.errorlens"
+vscode "wix.vscode-import-cost"
+vscode "yoavbls.pretty-ts-errors"

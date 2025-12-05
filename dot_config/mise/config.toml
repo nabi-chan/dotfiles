@@ -6,9 +6,6 @@ auto_install = true
 java = "zulu-23"
 node = "22"
 pnpm = "10"
+yarn = "1"
 python = "2.7.18"
-go = "latest"
 bun = "latest"
-
-[hooks]
-postinstall = 'corepack enable'
