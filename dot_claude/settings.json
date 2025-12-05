@@ -1,6 +1,14 @@
 {
   "permissions": {
-    "allow": ["WebSearch", "WebFetch"],
+    "allow": ["WebSearch", "WebFetch", "Bash(*)", "mcp__*"],
+    "deny": [],
+    "ask": [
+      "Bash(rm:*)",
+      "Bash(mv:*)",
+      "Bash(chown:*)",
+      "Bash(chmod:*)",
+      "Bash(sudo:*)"
+    ],
     "defaultMode": "acceptEdits"
   },
   "hooks": {
@@ -15,5 +23,5 @@
       }
     ]
   },
-  "alwaysThinkingEnabled": false
+  "alwaysThinkingEnabled": true
 }

@@ -13,3 +13,4 @@
     bun_home = "$HOME/.bun"
     pnpm_home = "$HOME/Library/pnpm"
     android_home = "$HOME/Library/Android/sdk"
+    mise_home = "$HOME/.local/share/mise/shims"
