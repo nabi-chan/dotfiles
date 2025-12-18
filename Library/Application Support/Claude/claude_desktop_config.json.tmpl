@@ -1,16 +1,17 @@
 {
   "mcpServers": {
     "connector-mongo": {
-      "args": ["-y", "mongodb-mcp-server@latest"],
+      "type": "stdio",
       "command": "{{ .chezmoi.homeDir }}/.local/share/mise/shims/npx",
+      "args": ["-y", "mongodb-mcp-server@latest"],
       "env": {
         "MDB_MCP_CONNECTION_STRING": "mongodb://root:1744@localhost:27017"
-      },
-      "type": "stdio"
+      }
     },
     "connector-mysql-local": {
-      "args": ["-y", "@benborla29/mcp-server-mysql@2.0.3"],
+      "type": "stdio",
       "command": "{{ .chezmoi.homeDir }}/.local/share/mise/shims/npx",
+      "args": ["-y", "@benborla29/mcp-server-mysql@2.0.3"],
       "env": {
         "ALLOW_DELETE_OPERATION": "true",
         "ALLOW_INSERT_OPERATION": "true",
@@ -20,35 +21,34 @@
         "MYSQL_HOST": "127.0.0.1",
         "MYSQL_PASS": "1744",
         "MYSQL_USER": "root"
-      },
-      "type": "stdio"
+      }
     },
     "documentation-aws": {
-      "args": ["awslabs.aws-documentation-mcp-server@latest"],
       "command": "uvx",
+      "args": ["awslabs.aws-documentation-mcp-server@latest"],
       "env": {
         "AWS_DOCUMENTATION_PARTITION": "aws"
       }
     },
     "documentation-context-7": {
-      "args": ["-y", "mcp-remote@latest", "https://mcp.context7.com/mcp"],
+      "type": "stdio",
       "command": "{{ .chezmoi.homeDir }}/.local/share/mise/shims/npx",
-      "type": "stdio"
+      "args": ["-y", "mcp-remote@latest", "https://mcp.context7.com/mcp"]
     },
     "documentation-shadcn": {
-      "args": ["-y", "shadcn@latest", "mcp"],
+      "type": "stdio",
       "command": "{{ .chezmoi.homeDir }}/.local/share/mise/shims/npx",
-      "type": "stdio"
+      "args": ["-y", "shadcn@latest", "mcp"]
     },
     "tools-figma": {
-      "args": ["-y", "mcp-remote@latest", "http://127.0.0.1:3845/mcp"],
+      "type": "stdio",
       "command": "{{ .chezmoi.homeDir }}/.local/share/mise/shims/npx",
-      "type": "stdio"
+      "args": ["-y", "mcp-remote@latest", "http://127.0.0.1:3845/mcp"]
     },
     "tools-pyhub": {
-      "args": ["run", "stdio"],
+      "type": "stdio",
       "command": "{{ .chezmoi.homeDir }}/mcptools/pyhub.mcptools/pyhub.mcptools",
-      "type": "stdio"
+      "args": ["run", "stdio"]
     }
   },
   "preferences": {
