@@ -1,7 +1,6 @@
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 eval "$({{ .system.homebrew_prefix }}/bin/brew shellenv)"
-eval "$(mise activate zsh)"
 
 export ZPLUG_HOME={{ .system.homebrew_prefix }}/opt/zplug
 [ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
@@ -9,22 +8,19 @@ export ZPLUG_HOME={{ .system.homebrew_prefix }}/opt/zplug
 export ZSH_DOTENV_FILE='.env.local'
 export ZSH_DOTENV_PROMPT=false
 
-zplug "plugins/1password", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/aws", from:oh-my-zsh
-zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/mise", from:oh-my-zsh
-zplug "plugins/gh", from:oh-my-zsh
-zplug "plugins/httpie", from:oh-my-zsh
 zplug "plugins/dotenv", from:oh-my-zsh
-zplug "lib/completion", from:oh-my-zsh
 zplug "lib/key-bindings", from:oh-my-zsh
 zplug "lib/directories", from:oh-my-zsh
 
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-autosuggestions"
+zplug "plugins/git", from:oh-my-zsh, defer:2
+zplug "plugins/aws", from:oh-my-zsh, defer:2
+zplug "plugins/docker", from:oh-my-zsh, defer:2
+zplug "plugins/mise", from:oh-my-zsh, defer:2
+zplug "plugins/gh", from:oh-my-zsh, defer:2
+zplug "lib/completion", from:oh-my-zsh, defer:2
 
-zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+zplug "zsh-users/zsh-autosuggestions", defer:2
+zplug "zsh-users/zsh-syntax-highlighting", defer:3
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -55,7 +51,8 @@ path=(
 
 [ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
+eval "$(starship init zsh)"
+
 if [ "$TERM_PROGRAM" = "WarpTerminal" ]; then
-    export SPACESHIP_PROMPT_ASYNC=FALSE
-    printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
+    printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh" } }\x9c'
 fi
