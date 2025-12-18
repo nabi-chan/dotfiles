@@ -1,6 +1,6 @@
 {
   "permissions": {
-    "allow": ["WebSearch", "WebFetch", "Bash(*)", "mcp__*"],
+    "allow": ["WebSearch", "WebFetch", "Bash(:*:*)", "mcp__*"],
     "deny": [],
     "ask": [
       "Bash(rm:*)",
