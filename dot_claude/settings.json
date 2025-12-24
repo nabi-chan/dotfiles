@@ -1,6 +1,6 @@
 {
   "permissions": {
-    "allow": ["WebSearch", "WebFetch", "Bash(:*:*)", "mcp__*"],
+    "allow": ["WebSearch", "WebFetch(domain:*)", "Bash(:*:*)", "mcp__*"],
     "deny": [],
     "ask": [
       "Bash(rm:*)",
@@ -23,5 +23,14 @@
       }
     ]
   },
-  "alwaysThinkingEnabled": true
+  "enabledPlugins": {
+    "context7@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "alwaysThinkingEnabled": true,
+  "statusLine": {
+    "type": "command",
+    "command": "bunx -y ccstatusline@latest",
+    "padding": 0
+  }
 }
