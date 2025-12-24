@@ -1,26 +1,10 @@
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
-
-eval "$({{ .system.homebrew_prefix }}/bin/brew shellenv)"
-
-export ZPLUG_HOME={{ .system.homebrew_prefix }}/opt/zplug
 [ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
 
-export ZSH_DOTENV_FILE='.env.local'
-export ZSH_DOTENV_PROMPT=false
-
-zplug "plugins/dotenv", from:oh-my-zsh
-zplug "lib/key-bindings", from:oh-my-zsh
-zplug "lib/directories", from:oh-my-zsh
-
-zplug "plugins/git", from:oh-my-zsh, defer:2
-zplug "plugins/aws", from:oh-my-zsh, defer:2
-zplug "plugins/docker", from:oh-my-zsh, defer:2
-zplug "plugins/mise", from:oh-my-zsh, defer:2
-zplug "plugins/gh", from:oh-my-zsh, defer:2
-zplug "lib/completion", from:oh-my-zsh, defer:2
-
-zplug "zsh-users/zsh-autosuggestions", defer:2
-zplug "zsh-users/zsh-syntax-highlighting", defer:3
+# Plugins
+{{- range .zplug_plugins }}
+zplug "{{ .name }}"{{- if hasKey . "from" }}, from:{{ .from }}{{- end }}{{- if hasKey . "defer" }}, defer:{{ .defer }}{{- end }}
+{{- end }}
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -31,29 +15,17 @@ fi
 
 zplug load
 
+# Paths
+{{- range .paths }}
+export PATH="{{ . }}:$PATH"
+{{- end }}
+
+# Aliases
 {{- range $key, $value := .aliases }}
 alias {{ $key }}='{{ $value }}'
 {{- end }}
 
-export PNPM_HOME="{{ .paths.pnpm_home }}"
-export BUN_INSTALL="{{ .paths.bun_home }}"
-export ANDROID_HOME="{{ .paths.android_home }}"
-
-path=(
-    $PNPM_HOME
-    $BUN_INSTALL/bin
-    {{ .system.homebrew_prefix }}/opt/mysql-client/bin
-    $ANDROID_HOME/tools
-    $ANDROID_HOME/tools/bin
-    $ANDROID_HOME/platform-tools
-    $path
-)
-
-[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
-
-eval "$(mise activate zsh)"
-eval "$(starship init zsh)"
-
+# Warp
 if [ "$TERM_PROGRAM" = "WarpTerminal" ]; then
     printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh" } }\x9c'
 fi

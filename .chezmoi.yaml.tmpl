@@ -1,0 +1,16 @@
+diff:
+  pager: less -R
+
+merge:
+  command: code
+  args:
+    - --wait
+    - --merge
+    - "{{ "{{" }} .Destination {{ "}}" }}"
+    - "{{ "{{" }} .Source {{ "}}" }}"
+    - "{{ "{{" }} .Target {{ "}}" }}"
+
+data:
+  system:
+    arch: "{{ .chezmoi.arch }}"
+    homebrew_prefix: {{ if eq .chezmoi.arch "arm64" }}"/opt/homebrew"{{ else }}"/usr/local"{{ end }}
