@@ -9,8 +9,9 @@
       "Bash(chmod:*)",
       "Bash(sudo:*)"
     ],
-    "defaultMode": "acceptEdits"
+    "defaultMode": "plan"
   },
+  "model": "opusplan",
   "hooks": {
     "Notification": [
       {
