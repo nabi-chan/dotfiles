@@ -1,0 +1,36 @@
+#!/bin/bash
+# Hash: {{ include ".chezmoidata.yaml" | sha256sum }}
+
+set -e
+
+CLAUDE_SETTINGS="$HOME/.claude.json"
+
+[ -f "$CLAUDE_SETTINGS" ] || echo '{}' > "$CLAUDE_SETTINGS"
+
+cat <<'EOF' | yq -o=json | jq -s '.[0] * {mcpServers: .[1]} | .mcpServers |= walk(if type == "object" then with_entries(select(.value != null)) else . end)' "$CLAUDE_SETTINGS" - > "${CLAUDE_SETTINGS}.tmp"
+{{- range $name, $config := .mcp_servers }}
+"{{ $name }}":
+  type: "{{ $config.type }}"
+{{- if eq $config.type "http" }}
+  url: "{{ $config.url }}"
+{{- else if eq $config.type "stdio" }}
+  command: "{{ $config.command }}"
+{{- with (index $config "args") }}
+  args:
+{{- range . }}
+    - "{{ . }}"
+{{- end }}
+{{- end }}
+  env:
+    PATH: {{ env "HOMEBREW_PREFIX" }}/bin
+{{- with (index $config "environment") }}
+{{- range $k, $v := . }}
+    "{{ $k }}": "{{ $v }}"
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+EOF
+
+mv "${CLAUDE_SETTINGS}.tmp" "$CLAUDE_SETTINGS"
+echo "Claude Code MCP servers synced successfully!"

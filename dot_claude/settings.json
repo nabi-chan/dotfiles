@@ -1,6 +1,19 @@
 {
   "permissions": {
-    "allow": ["WebSearch", "WebFetch", "Bash", "mcp__ide"],
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Bash",
+      "mcp__ide",
+      "mcp__connector-database",
+      "mcp__documentation-aws",
+      "mcp__documentation-shadcn",
+      "mcp__tools-chrome",
+      "mcp__tools-figma",
+      "mcp__tools-figma-desktop",
+      "mcp__tools-pyhub-mcptools",
+      "mcp__plugin_context7_context7"
+    ],
     "deny": [],
     "ask": [
       "Bash(rm:*)",

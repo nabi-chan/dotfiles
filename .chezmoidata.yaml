@@ -19,10 +19,6 @@ environment:
   # zplug
   ZPLUG_HOME: $HOMEBREW_PREFIX/opt/zplug
 
-  # claude code
-  MAX_MCP_OUTPUT_TOKENS: "1000000"
-  CLAUDE_CODE_MAX_OUTPUT_TOKENS: "1000000"
-
   # dotenv
   ZSH_DOTENV_FILE: .env.local
   ZSH_DOTENV_PROMPT: false
@@ -69,3 +65,60 @@ zplug_plugins:
     defer: 3
   - name: zsh-users/zsh-syntax-highlighting
     defer: 3
+
+mcp_servers:
+  connector-database:
+    type: stdio
+    command: mise
+    args:
+      - x
+      - npm:@bytebase/dbhub
+      - --
+      - dbhub
+      - --transport
+      - stdio
+      - --config
+      - ~/.config/dbhub/dbhub.toml
+  documentation-aws:
+    type: stdio
+    command: mise
+    args:
+      - x
+      - pipx:awslabs.aws-documentation-mcp-server
+      - --
+      - awslabs.aws-documentation-mcp-server
+    environment:
+      AWS_DOCUMENTATION_PARTITION: aws
+  documentation-shadcn:
+    type: stdio
+    command: mise
+    args:
+      - x
+      - npm:shadcn
+      - --
+      - shadcn
+      - mcp
+  tools-chrome:
+    type: stdio
+    command: mise
+    args:
+      - x
+      - npm:chrome-devtools-mcp
+      - --
+      - chrome-devtools-mcp
+      - --autoConnect
+  tools-pyhub-mcptools:
+    type: stdio
+    command: mise
+    args:
+      - x
+      - pip:pyhub.mcptools
+      - --
+      - pyhub.mcptools
+      - run
+  tools-figma:
+    type: http
+    url: https://mcp.figma.com/mcp
+  tools-figma-desktop:
+    type: http
+    url: http://127.0.0.1:3845/mcp

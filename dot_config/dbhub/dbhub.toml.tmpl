@@ -1,0 +1,9 @@
+[[sources]]
+id = "mysql.local"
+dsn = "mysql://root:1744@localhost:3306"
+
+[[sources]]
+id = "postgresql.local"
+dsn = "postgres://postgres:postgres@postgres.local.orb.local:5432"
+
+{{ include "dot_config/dbhub/dbhub.toml.local" }}
