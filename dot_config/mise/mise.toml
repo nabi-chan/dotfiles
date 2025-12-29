@@ -3,9 +3,8 @@ experimental = true
 auto_install = true
 
 [tools]
-java = "zulu-23"
-node = "22"
-pnpm = "10"
-yarn = "1"
+java = "21.0.2"
+node = "22.21.1"
+pnpm = "10.22.0"
 python = "2.7.18"
 bun = "latest"
