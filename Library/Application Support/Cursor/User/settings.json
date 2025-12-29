@@ -5,6 +5,9 @@
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "cursor.cpp.enablePartialAccepts": true,
   "diffEditor.ignoreTrimWhitespace": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "'JetbrainsMono Nerd Font', monospace",
   "editor.fontLigatures": true,
@@ -32,7 +35,8 @@
   "files.associations": {
     "*.css": "tailwindcss",
     "*.json.tmpl": "jsonl",
-    "*.just": "shellscript"
+    "*.just": "shellscript",
+    "*.toml.local": "toml"
   },
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -42,23 +46,17 @@
   "githubPullRequests.pullBranch": "never",
   "importCost.showCalculatingDecoration": false,
   "importCost.typescriptExtensions": ["\\.ts$", "\\.tsx?$"],
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-21",
-      "path": "/Users/nabi/.local/share/mise/installs/java/zulu-21.46.19.0/zulu-21.jdk/Contents/Home/"
-    }
-  ],
   "javascript.updateImportsOnFileMove.enabled": "always",
   "prettier.enable": true,
   "prettier.resolveGlobalModules": true,
   "redhat.telemetry.enabled": false,
-  "tailwindCSS.classFunctions": ["cva", "cx", "cn"],
+  "security.promptForLocalFileProtocolHandling": false,
+  "tailwindCSS.classFunctions": ["cva", "clsx", "cx", "cn"],
   "terminal.explorerKind": "external",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.confirmSaveUntitledWorkspace": true,
   "workbench.colorTheme": "Catppuccin Frappé",
   "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.iconTheme": "catppuccin-frappe",
-  "security.promptForLocalFileProtocolHandling": false
+  "workbench.iconTheme": "catppuccin-frappe"
 }
