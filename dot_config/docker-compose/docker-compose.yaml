@@ -1,0 +1,46 @@
+name: local
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:18-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - local
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - local
+  minio:
+    container_name: minio
+    image: alpine/minio:latest-release
+    user: root
+    command: server /data --console-address ":9001"
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+    volumes:
+      - minio_data:/data
+    networks:
+      - local
+
+volumes:
+  postgres_data:
+    driver: local
+  mysql_data:
+    driver: local
+  minio_data:
+    driver: local
+
+networks:
+  local:
+    driver: bridge

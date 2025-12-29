@@ -1,0 +1,7 @@
+#!/bin/bash
+# Docker Compose hash: {{ include "dot_config/docker-compose/docker-compose.yaml" | sha256sum }}
+
+set -e
+[ -f "$(command -v docker)" ] || { echo "Docker not installed, skipping update"; exit 0; }
+
+docker compose -f $HOME/.config/docker-compose/docker-compose.yaml up -d
