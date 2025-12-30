@@ -9,7 +9,7 @@
     "source.fixAll": "explicit"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "'JetbrainsMono Nerd Font', monospace",
+  "editor.fontFamily": "'JetBrainsMono Hangul Nerd Font', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnPaste": true,
@@ -58,5 +58,16 @@
   "window.confirmSaveUntitledWorkspace": true,
   "workbench.colorTheme": "Catppuccin Frappé",
   "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.iconTheme": "catppuccin-frappe"
+  "workbench.iconTheme": "catppuccin-frappe",
+  "java.configuration.detectJdksAtStart": true,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-21",
+      "path": "/Library/Java/JavaVirtualMachines/21.0.2.jdk/Contents/Home"
+    },
+    {
+      "name": "JavaSE-23",
+      "path": "/Library/Java/JavaVirtualMachines/23.0.2.jdk/Contents/Home"
+    }
+  ]
 }
