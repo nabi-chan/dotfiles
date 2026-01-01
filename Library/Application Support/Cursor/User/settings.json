@@ -9,7 +9,7 @@
     "source.fixAll": "explicit"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "'JetBrainsMono Hangul Nerd Font', monospace",
+  "editor.fontFamily": "'JetBrainsMono Hangul Nerd Font', 'D2Coding', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnPaste": true,
@@ -46,6 +46,19 @@
   "githubPullRequests.pullBranch": "never",
   "importCost.showCalculatingDecoration": false,
   "importCost.typescriptExtensions": ["\\.ts$", "\\.tsx?$"],
+  "java.configuration.detectJdksAtStart": true,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-21",
+      "path": "/Library/Java/JavaVirtualMachines/21.0.2.jdk/Contents/Home"
+    },
+    {
+      "name": "JavaSE-23",
+      "path": "/Library/Java/JavaVirtualMachines/23.0.2.jdk/Contents/Home"
+    }
+  ],
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx16G -Xms512M -Xlog:disable",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "prettier.enable": true,
   "prettier.resolveGlobalModules": true,
@@ -58,16 +71,5 @@
   "window.confirmSaveUntitledWorkspace": true,
   "workbench.colorTheme": "Catppuccin Frappé",
   "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.iconTheme": "catppuccin-frappe",
-  "java.configuration.detectJdksAtStart": true,
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-21",
-      "path": "/Library/Java/JavaVirtualMachines/21.0.2.jdk/Contents/Home"
-    },
-    {
-      "name": "JavaSE-23",
-      "path": "/Library/Java/JavaVirtualMachines/23.0.2.jdk/Contents/Home"
-    }
-  ]
+  "workbench.iconTheme": "catppuccin-frappe"
 }
