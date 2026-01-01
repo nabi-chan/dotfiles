@@ -109,13 +109,10 @@ mcp_servers:
       - --autoConnect
   tools-pyhub-mcptools:
     type: stdio
-    command: mise
+    command: pyhub.mcptools
     args:
-      - x
-      - pip:pyhub.mcptools
-      - --
-      - pyhub.mcptools
       - run
+      - stdio
   tools-figma:
     type: http
     url: https://mcp.figma.com/mcp

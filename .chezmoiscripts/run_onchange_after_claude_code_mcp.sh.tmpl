@@ -22,7 +22,7 @@ cat <<'EOF' | yq -o=json | jq -s '.[0] * {mcpServers: .[1]} | .mcpServers |= wal
 {{- end }}
 {{- end }}
   env:
-    PATH: {{ env "HOMEBREW_PREFIX" }}/bin
+    PATH: {{ env "PATH" }}
 {{- with (index $config "environment") }}
 {{- range $k, $v := . }}
     "{{ $k }}": "{{ $v }}"
