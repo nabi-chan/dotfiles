@@ -1,4 +1,8 @@
 {
+  "env": {
+    "MAX_MCP_OUTPUT_TOKENS": "1000000",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "1000000"
+  },
   "permissions": {
     "allow": [
       "WebSearch",
@@ -25,10 +29,6 @@
     "defaultMode": "plan"
   },
   "model": "opusplan",
-  "env": {
-    "MAX_MCP_OUTPUT_TOKENS": "1000000",
-    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "1000000"
-  },
   "hooks": {
     "Notification": [
       {
