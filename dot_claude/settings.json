@@ -1,13 +1,17 @@
 {
   "env": {
     "MAX_MCP_OUTPUT_TOKENS": "1000000",
-    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "1000000"
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "1000000",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
+  "language": "Korean",
   "permissions": {
     "allow": [
       "WebSearch",
       "WebFetch",
       "Bash",
+      "Read(~/.claude-temp/**)",
+      "Write(~/.claude-temp/**)",
       "mcp__ide",
       "mcp__connector-database",
       "mcp__documentation-aws",
@@ -28,14 +32,25 @@
     ],
     "defaultMode": "plan"
   },
-  "model": "opusplan",
+  "model": "opus",
   "hooks": {
     "Notification": [
       {
         "hooks": [
           {
+            "command": "afplay /System/Library/Sounds/Funk.aiff",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "tool == \"Edit\"",
+        "hooks": [
+          {
             "type": "command",
-            "command": "afplay /System/Library/Sounds/Funk.aiff"
+            "command": "bunx prettier --write \"$CC_TOOL_INPUT_FILE_PATH\" --ignore-unknown"
           }
         ]
       }
@@ -46,8 +61,10 @@
     "command": "bunx -y ccstatusline@latest",
     "padding": 0
   },
+  "teammateMode": "tmux",
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true
