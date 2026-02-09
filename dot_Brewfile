@@ -16,23 +16,24 @@ brew "just"
 brew "lazygit"
 brew "mas"
 brew "mise"
+brew "mysql-client"
 brew "pv"
 brew "pygments"
+brew "sshpass"
 brew "starship"
 brew "tree"
 brew "wget"
+brew "wireguard-tools"
 brew "yq"
 brew "zplug"
 
 # Cask
 cask "1password"
-cask "1password-cli"
 cask "adobe-acrobat-pro"
 cask "android-studio"
 cask "claude"
 cask "claude-code"
 cask "cursor"
-cask "datagrip"
 cask "discord"
 cask "figma"
 cask "font-d2coding"
@@ -53,9 +54,11 @@ cask "orbstack"
 cask "raycast"
 cask "screen-studio"
 cask "setapp"
+cask "iterm2"
+cask "itermai"
 cask "slack"
+cask "tailscale-app"
 cask "utm"
-cask "warp"
 
 # Mac App Store
 mas "1Password for Safari", id: 1569813296
@@ -64,13 +67,14 @@ mas "ColorSlurp", id: 1287239339
 mas "CrystalFetch", id: 6454431289
 mas "Developer", id: 640199958
 mas "FileZilla Pro", id: 1298486723
+mas "Keynote", id: 361285480
 mas "Magnet", id: 441258766
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
+mas "Numbers", id: 361304891
+mas "Pages", id: 361309726
+mas "Pixelmator Pro", id: 6746662575
 mas "Raycast Companion", id: 6738274497
 mas "Refined GitHub", id: 1519867270
 mas "Transporter", id: 1450874784
@@ -83,6 +87,7 @@ mas "카카오톡", id: 869223134
 mas "카카오톡 (업무)", id: 869223134
 
 # VSCode
+vscode "1password.op-vscode"
 vscode "aaron-bond.better-comments"
 vscode "anthropic.claude-code"
 vscode "anysphere.remote-ssh"
@@ -97,13 +102,13 @@ vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-rename-tag"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
-vscode "inferrinizzard.prettier-sql-vscode"
+vscode "hashicorp.hcl"
 vscode "k--kato.intellij-idea-keybindings"
 vscode "mechatroner.rainbow-csv"
 vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
-vscode "prettier.prettier-vscode"
+vscode "ms-vscode.hexeditor"
 vscode "prisma.prisma"
 vscode "redhat.java"
 vscode "redhat.vscode-xml"
