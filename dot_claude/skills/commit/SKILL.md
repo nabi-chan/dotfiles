@@ -1,0 +1,35 @@
+---
+name: commit
+description: 현재 변경사항을 논리적 단위로 분리하여 각각 독립된 커밋으로 생성합니다.
+disable-model-invocation: true
+allowed-tools: Bash(git:*)
+---
+
+# 단위적 커밋 (Atomic Commits)
+
+## 절차
+
+1. `git status`와 `git diff`로 전체 변경사항 파악
+2. 변경사항을 논리적 단위로 분류:
+   - 하나의 기능 (추가/수정)/버그픽스/리팩토링에 해당하는 파일들을 그룹으로 묶기
+   - 관련 없는 변경은 반드시 별도 커밋으로 분리
+   - 테스트 파일은 해당 구현 파일과 같은 커밋에 포함
+3. 각 그룹의 파일 목록을 사용자에게 보여주고 확인받기
+4. 확인된 그룹별로:
+   - `git add`로 해당 파일만 스테이징
+   - conventional commit 형식으로 커밋 메시지 작성
+5. `git log --oneline`으로 전체 커밋 결과 요약
+
+## 커밋 메시지 규칙
+
+- 형식: `type: 설명` (단일 프로젝트), `type(scope): 설명` (모노레포)
+- type: feat, fix, chore, deps, refactor, docs, style
+- scope는 모노레포에서만 사용하며 폴더 경로를 지정 (예시: `apps/web`)
+- 설명은 한국어로 작성
+- 본문이 필요한 경우 "왜" 변경했는지 기술
+- /bin/cat 을 사용하여 커밋 메시지를 작성 (cat 명령어는 ANSI 컬러가 포함되어 있음)
+
+## 주의사항
+
+- `.env`, 시크릿 파일은 커밋하지 않기
+- `--no-verify`, `--no-gpg-sign` 사용 금지
