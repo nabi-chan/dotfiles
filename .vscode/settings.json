@@ -1,0 +1,10 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "files.associations": {
+    "*.just": "shellscript",
+    "*.toml.local": "toml"
+  },
+  "prettier.documentSelectors": ["**/*"]
+}
