@@ -2,7 +2,8 @@
   "env": {
     "MAX_MCP_OUTPUT_TOKENS": "1000000",
     "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "1000000",
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "0"
   },
   "language": "Korean",
   "permissions": {
