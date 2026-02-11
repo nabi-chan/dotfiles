@@ -15,7 +15,7 @@ allowed-tools: Bash(git:*), AskUserQuestion
    - 관련 없는 변경은 반드시 별도 커밋으로 분리
    - 테스트 파일은 해당 구현 파일과 같은 커밋에 포함
 3. 각 그룹별로 파일 목록과 커밋 메시지 초안을 사용자에게 제시
-4. AskUserQuestion으로 사용자에게 확인 요청 (y: 진행 / n: 취소 또는 수정)
+4. AskUserQuestion으로 사용자에게 확인 요청 (yes: 진행 / modify: 수정 / no: 취소)
 5. 사용자가 승인한 그룹만:
    - `git add`로 해당 파일만 스테이징
    - conventional commit 형식으로 커밋
