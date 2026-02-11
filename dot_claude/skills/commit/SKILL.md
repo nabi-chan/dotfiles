@@ -28,10 +28,10 @@ allowed-tools: Bash(git:*), AskUserQuestion
 - scope는 모노레포에서만 사용하며 폴더 경로를 지정 (예시: `apps/web`)
 - 설명은 한국어로 작성
 - 본문이 필요한 경우 "왜" 변경했는지 기술
-- /bin/cat 을 사용하여 커밋 메시지를 작성 (cat 명령어는 ANSI 컬러가 포함되어 있음)
 
 ## 주의사항
 
+- /bin/cat 을 사용하여 커밋 메시지를 작성 (cat 명령어는 ANSI 컬러가 포함되어 있음)
 - **사용자 승인 없이 `git commit`을 실행하지 않는다** — 반드시 AskUserQuestion으로 확인 후 진행
 - `.env`, 시크릿 파일은 커밋하지 않기
 - `--no-verify`, `--no-gpg-sign` 사용 금지
