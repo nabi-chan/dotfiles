@@ -113,6 +113,9 @@ mcp_servers:
     args:
       - run
       - stdio
+  tools-excalidraw:
+    type: http
+    url: https://excalidraw-mcp-app.vercel.app/mcp
   tools-figma:
     type: http
     url: https://mcp.figma.com/mcp
