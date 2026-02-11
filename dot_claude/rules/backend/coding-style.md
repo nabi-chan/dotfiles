@@ -16,18 +16,24 @@ description: Java Spring 백엔드 코딩 스타일 규칙
 
 ## 불변성
 
-DTO, VO는 record 또는 불변 객체로 작성:
+DTO 용도에 따라 record / class 구분:
+
+- **record**: 불변이 자연스러운 경우 (request body, response)
+- **class**: 기본값, setter 바인딩이 필요한 경우 (query parameter 등)
 
 ```java
-// BAD
-@Data
-public class UserResponse {
-    private String name;
-    private String email;
-}
-
-// GOOD
+// request body, response — record
+public record CreateUserRequest(@NotBlank String name, @Email String email) {}
 public record UserResponse(String name, String email) {}
+
+// query parameter — class (기본값, setter 바인딩 필요)
+@ParameterObject
+@Getter @Setter
+public class UserSearchRequest {
+    private String keyword;
+    private Integer page = 0;
+    private Integer size = 20;
+}
 ```
 
 컬렉션은 불변으로 반환:
