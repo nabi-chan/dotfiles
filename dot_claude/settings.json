@@ -5,7 +5,6 @@
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "0"
   },
-  "language": "Korean",
   "permissions": {
     "allow": [
       "WebSearch",
@@ -40,8 +39,8 @@
       {
         "hooks": [
           {
-            "command": "afplay /System/Library/Sounds/Funk.aiff",
-            "type": "command"
+            "type": "command",
+            "command": "afplay /System/Library/Sounds/Funk.aiff"
           }
         ]
       }
@@ -63,11 +62,12 @@
     "command": "bunx -y ccstatusline@latest",
     "padding": 0
   },
-  "teammateMode": "tmux",
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true
   },
-  "alwaysThinkingEnabled": true
+  "language": "Korean",
+  "alwaysThinkingEnabled": true,
+  "teammateMode": "tmux"
 }
