@@ -3,18 +3,14 @@ name: coding-style
 description: Java Spring 백엔드 코딩 스타일 규칙
 ---
 
-# 코딩 스타일
+# 코딩 스타일 (백엔드)
 
 ## 네이밍
 
-| 대상              | 규칙             | 예시                                   |
-| ----------------- | ---------------- | -------------------------------------- |
-| 클래스/인터페이스 | PascalCase       | `UserService`, `OrderRepository`       |
-| 메서드/변수       | camelCase        | `findByEmail`, `isActive`              |
-| 상수              | UPPER_SNAKE_CASE | `MAX_RETRY_COUNT`, `DEFAULT_PAGE_SIZE` |
-| 패키지            | 소문자           | `com.example.user`                     |
+| 대상   | 규칙   | 예시               |
+| ------ | ------ | ------------------ |
+| 패키지 | 소문자 | `com.example.user` |
 
-- boolean 메서드/변수는 `is`, `has`, `can`, `should` 접두사 사용
 - 인터페이스에 `I` 접두사 사용 금지 — 구현체에 `Impl` 접미사도 지양
 - 축약어 지양: `usr` → `user`, `msg` → `message`
 
@@ -58,8 +54,7 @@ Controller → Service → Repository
 
 ## 메서드 설계
 
-- 메서드는 **30줄 미만**, 하나의 역할만 수행
-- 중첩 **3레벨 이하** 유지, 얼리 리턴 활용:
+- 메서드는 **30줄 미만**
 
 ```java
 public OrderResult processOrder(OrderCommand command) {
@@ -74,15 +69,12 @@ public OrderResult processOrder(OrderCommand command) {
 
 ## 패키지 구성
 
-- **도메인별** 구성: 최상위 패키지 아래 도메인 패키지로 분리
 - 각 도메인 패키지에 `controller/`, `service/`, `models/` 등 배치
 - `models/` 하위에 VO, DTO, Entity, Repository, Enum 배치
-- 하위 도메인이 필요한 경우 도메인 패키지 내 중첩 가능
-- 여러 도메인에서 공유하는 코드는 `common/` 또는 `shared/`에 배치
 
 ## 오류 처리
 
-시스템 경계(Controller, 외부 API 호출)에서만 처리. 내부 코드는 예외를 던지고 `@RestControllerAdvice`에서 통합 처리:
+내부 코드는 예외를 던지고 `@RestControllerAdvice`에서 통합 처리:
 
 ```java
 // 도메인 예외 — 발생시키기만
