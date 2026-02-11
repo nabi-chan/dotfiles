@@ -2,7 +2,7 @@
 name: commit
 description: 현재 변경사항을 논리적 단위로 분리하여 각각 독립된 커밋으로 생성합니다.
 disable-model-invocation: true
-allowed-tools: Bash(git:*)
+allowed-tools: Bash(git:*), AskUserQuestion
 ---
 
 # 단위적 커밋 (Atomic Commits)
@@ -14,11 +14,12 @@ allowed-tools: Bash(git:*)
    - 하나의 기능 (추가/수정)/버그픽스/리팩토링에 해당하는 파일들을 그룹으로 묶기
    - 관련 없는 변경은 반드시 별도 커밋으로 분리
    - 테스트 파일은 해당 구현 파일과 같은 커밋에 포함
-3. 각 그룹의 파일 목록을 사용자에게 보여주고 확인받기
-4. 확인된 그룹별로:
+3. 각 그룹별로 파일 목록과 커밋 메시지 초안을 사용자에게 제시
+4. AskUserQuestion으로 사용자에게 확인 요청 (y: 진행 / n: 취소 또는 수정)
+5. 사용자가 승인한 그룹만:
    - `git add`로 해당 파일만 스테이징
-   - conventional commit 형식으로 커밋 메시지 작성
-5. `git log --oneline`으로 전체 커밋 결과 요약
+   - conventional commit 형식으로 커밋
+6. `git log --oneline`으로 전체 커밋 결과 요약
 
 ## 커밋 메시지 규칙
 
@@ -31,6 +32,6 @@ allowed-tools: Bash(git:*)
 
 ## 주의사항
 
-- 사용자가 명시적으로 커밋을 요청한 경우에만 실행 (수정사항 반영 후 바로 커밋 금지)
+- **사용자 승인 없이 `git commit`을 실행하지 않는다** — 반드시 AskUserQuestion으로 확인 후 진행
 - `.env`, 시크릿 파일은 커밋하지 않기
 - `--no-verify`, `--no-gpg-sign` 사용 금지
