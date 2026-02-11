@@ -26,10 +26,12 @@ brew "wget"
 brew "wireguard-tools"
 brew "yq"
 brew "zplug"
+brew "zstd"
 
 # Cask
 cask "1password"
 cask "adobe-acrobat-pro"
+cask "balenaetcher"
 cask "android-studio"
 cask "claude"
 cask "claude-code"
@@ -66,6 +68,7 @@ mas "Channel Talk", id: 1102655071
 mas "ColorSlurp", id: 1287239339
 mas "CrystalFetch", id: 6454431289
 mas "Developer", id: 640199958
+mas "ExcalidrawZ", id: 6636493997
 mas "FileZilla Pro", id: 1298486723
 mas "Keynote", id: 361285480
 mas "Magnet", id: 441258766
