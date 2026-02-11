@@ -113,6 +113,12 @@
         "color": "yellow",
         "bold": false
       }
+    ],
+    [
+      {
+        "id": "f3cc6fcc-2970-4d30-a32d-bccad03feac3",
+        "type": "claude-session-id"
+      }
     ]
   ],
   "flexMode": "full-minus-40",
