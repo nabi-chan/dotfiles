@@ -2,7 +2,7 @@
 name: commit
 description: 현재 변경사항을 논리적 단위로 분리하여 각각 독립된 커밋으로 생성합니다.
 disable-model-invocation: true
-allowed-tools: Bash(git:*), AskUserQuestion
+allowed-tools: Bash(git:*), Bash(/bin/ls:*), Bash(/bin/cat:*), AskUserQuestion
 ---
 
 # 단위적 커밋 (Atomic Commits)

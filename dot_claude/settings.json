@@ -23,7 +23,7 @@
       "mcp__tools-pyhub-mcptools",
       "mcp__plugin_context7_context7"
     ],
-    "deny": [],
+    "deny": ["Bash(ls:*)", "Bash(cat:*)"],
     "ask": [
       "Bash(rm:*)",
       "Bash(mv:*)",
