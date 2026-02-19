@@ -66,11 +66,15 @@
   "redhat.telemetry.enabled": false,
   "security.promptForLocalFileProtocolHandling": false,
   "tailwindCSS.classFunctions": ["cva", "clsx", "cx", "cn"],
+  "terminal.external.osxExec": "iTerm.app",
   "terminal.explorerKind": "external",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.confirmSaveUntitledWorkspace": true,
   "workbench.colorTheme": "Catppuccin Frappé",
   "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.iconTheme": "catppuccin-frappe"
+  "workbench.iconTheme": "catppuccin-frappe",
+  "remote.SSH.remotePlatform": {
+    "nabi@10.10.128.1": "macOS"
+  }
 }

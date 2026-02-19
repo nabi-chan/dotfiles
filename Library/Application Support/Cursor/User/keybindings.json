@@ -40,5 +40,13 @@
       "text": "\u001b\r"
     },
     "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.terminal.openNativeConsole"
   }
 ]
