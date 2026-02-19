@@ -5,7 +5,7 @@
 
 [core]
 	excludesFile = ~/.gitignore
-	ignorecase = true
+	ignorecase = false
 
 [tag]
 	forceSignAnnotated = true
