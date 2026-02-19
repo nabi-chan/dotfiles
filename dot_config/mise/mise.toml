@@ -15,10 +15,10 @@ yarn = "4.12.0"
 bun = "1.3.2"
 
 # cli
-awscli = { version = "2.33.16", symlink_bins = "true" }
 pulumi = "3.219.0"
 wrangler = "4.63.0"
 1password = "2.32.1"
+awscli = { version = "2.33.16", symlink_bins = "true" }
 
 # utilities
 flyway = "11.20.3"
