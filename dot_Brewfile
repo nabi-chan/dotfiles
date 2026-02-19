@@ -1,4 +1,5 @@
 # Tap
+tap "anomalyco/tap"
 tap "blurfx/tap"
 tap "jesseduffield/lazygit"
 
@@ -27,14 +28,16 @@ brew "wireguard-tools"
 brew "yq"
 brew "zplug"
 brew "zstd"
+brew "anomalyco/tap/opencode"
 
 # Cask
 cask "1password"
 cask "adobe-acrobat-pro"
-cask "balenaetcher"
 cask "android-studio"
+cask "balenaetcher"
 cask "claude"
 cask "claude-code"
+cask "codex"
 cask "cursor"
 cask "discord"
 cask "figma"
@@ -48,6 +51,8 @@ cask "google-drive"
 cask "hancom-word"
 cask "hex-fiend"
 cask "httpie-desktop"
+cask "iterm2"
+cask "itermai"
 cask "karabiner-elements"
 cask "logi-options+"
 cask "notion"
@@ -56,14 +61,13 @@ cask "orbstack"
 cask "raycast"
 cask "screen-studio"
 cask "setapp"
-cask "iterm2"
-cask "itermai"
 cask "slack"
 cask "tailscale-app"
 cask "utm"
 
 # Mac App Store
 mas "1Password for Safari", id: 1569813296
+mas "AladinEbook", id: 1023251042
 mas "Channel Talk", id: 1102655071
 mas "ColorSlurp", id: 1287239339
 mas "CrystalFetch", id: 6454431289
@@ -77,17 +81,16 @@ mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 361304891
 mas "Pages", id: 361309726
-mas "Pixelmator Pro", id: 6746662575
 mas "Raycast Companion", id: 6738274497
 mas "Refined GitHub", id: 1519867270
 mas "Transporter", id: 1450874784
 mas "Windows App", id: 1295203466
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
-mas "반디집", id: 1265704574
-mas "유니콘", id: 1231935892
-mas "카카오톡", id: 869223134
-mas "카카오톡 (업무)", id: 869223134
+mas "반디집", id: 1265704574
+mas "유니콘", id: 1231935892
+mas "카카오톡", id: 869223134
+mas "카카오톡 (업무)", id: 869223134
 
 # VSCode
 vscode "1password.op-vscode"
@@ -112,6 +115,7 @@ vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-vscode.hexeditor"
+vscode "openai.chatgpt"
 vscode "prisma.prisma"
 vscode "redhat.java"
 vscode "redhat.vscode-xml"
