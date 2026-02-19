@@ -1,3 +1,34 @@
 {
-  "$schema": "https://opencode.ai/config.json"
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": true,
+  "enabled_providers": ["anthropic", "openai"],
+  "instructions": ["~/.config/opencode/rules/**/*.md"],
+  "mcp": {},
+  "permission": {
+    "bash": {
+      "*": "allow",
+
+      // deny
+      "cat *": "deny",
+      "ls *": "deny",
+
+      // ask
+      "rm *": "ask",
+      "mv *": "ask",
+      "chown *": "ask",
+      "chmod *": "ask",
+      "sudo *": "ask"
+    },
+    "external_directory": {
+      "~/.opencode-temp/**": "allow"
+    }
+  },
+  "theme": "one-dark",
+  "default_agent": "plan",
+  "formatter": {
+    "prettier": {
+      "command": ["bunx", "prettier", "--write", "$FILE"],
+      "extensions": [".js", ".ts", ".jsx", ".tsx", ".css", ".json", ".md", ".html"]
+    }
+  }
 }
