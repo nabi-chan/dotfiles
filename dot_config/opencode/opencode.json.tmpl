@@ -3,16 +3,14 @@
   "autoupdate": true,
   "enabled_providers": ["anthropic", "openai"],
   "instructions": ["~/.config/opencode/rules/**/*.md"],
-  "mcp": {},
+  "mcp": {{- template "opencode-mcp.json.tmpl" . }},
   "permission": {
     "bash": {
       "*": "allow",
-
-      // deny
+      "/bin/cat *": "allow",
+      "/bin/ls *": "allow",
       "cat *": "deny",
       "ls *": "deny",
-
-      // ask
       "rm *": "ask",
       "mv *": "ask",
       "chown *": "ask",

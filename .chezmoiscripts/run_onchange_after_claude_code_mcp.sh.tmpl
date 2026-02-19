@@ -1,5 +1,5 @@
 #!/bin/bash
-# Hash: {{ include ".chezmoidata.yaml" | sha256sum }}
+# Hash: {{ include ".chezmoidata/mcp.yaml" | sha256sum }}
 
 set -e
 
@@ -18,7 +18,7 @@ cat <<'EOF' | yq -o=json | jq -s '.[0] * {mcpServers: .[1]} | .mcpServers |= wal
 {{- with (index $config "args") }}
   args:
 {{- range . }}
-    - "{{ . }}"
+    - "{{ . | replace "~" $.chezmoi.homeDir }}"
 {{- end }}
 {{- end }}
   env:

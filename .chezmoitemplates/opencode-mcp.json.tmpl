@@ -1,0 +1,28 @@
+ {
+{{- $first := true -}}
+{{- range $name, $config := .mcp_servers -}}
+{{- if not $first }},{{ end -}}
+{{- $first = false -}}
+{{- if eq $config.type "http" }}
+    "{{ $name }}": {
+      "type": "remote",
+      "url": "{{ $config.url }}"
+    }
+{{- else if eq $config.type "stdio" }}
+    "{{ $name }}": {
+      "type": "local",
+      "command": ["{{ $config.command }}"{{ range $config.args }}, "{{ . | replace "~" $.chezmoi.homeDir }}"{{ end }}]
+{{- if index $config "environment" }},
+      "environment": {
+{{- $envFirst := true }}
+{{- range $k, $v := $config.environment }}
+{{- if not $envFirst }},{{ end }}
+{{- $envFirst = false }}
+        "{{ $k }}": "{{ $v }}"
+{{- end }}
+      }
+{{- end }}
+    }
+{{- end -}}
+{{- end }}
+  }
