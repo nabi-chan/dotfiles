@@ -6,5 +6,6 @@
     "*.just": "shellscript",
     "*.toml.local": "toml"
   },
-  "prettier.documentSelectors": ["**/*"]
+  "prettier.documentSelectors": ["**/*"],
+  "prettier.resolveGlobalModules": true
 }

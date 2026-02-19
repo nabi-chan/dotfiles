@@ -10,7 +10,6 @@ allowed-tools: Bash, Read, Edit, Grep, Glob, mcp__ide__getDiagnostics
 ## 절차
 
 1. **진단 수집**
-
    - `mcp__ide__getDiagnostics`로 IDE 진단 정보 수집 (사용 가능한 경우)
    - 프로젝트 타입에 따라 CLI 린트 명령 실행:
      - TypeScript: `npx tsc --noEmit` (tsconfig.json 존재 시)
@@ -19,7 +18,6 @@ allowed-tools: Bash, Read, Edit, Grep, Glob, mcp__ide__getDiagnostics
    - 수집된 에러를 파일별로 그룹화하여 사용자에게 요약 표시
 
 2. **수정**
-
    - 에러를 파일 단위로 순차 수정
    - 한 파일의 모든 에러를 한 번에 수정
    - 자동 수정 가능한 경우 CLI 활용 (예: `eslint --fix`)

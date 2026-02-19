@@ -1,6 +1,6 @@
 # Tap
-tap "anomalyco/tap"
 tap "blurfx/tap"
+tap "anomalyco/tap"
 tap "jesseduffield/lazygit"
 
 # Brew

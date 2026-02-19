@@ -10,8 +10,8 @@ description: IDE 진단, tsc, ESLint, Java 빌드 에러 등 lint 오류를 수�
 1. **진단 수집**
 
    - 프로젝트 타입에 따라 CLI 린트 명령 실행:
-     - TypeScript: `npx tsc --noEmit` (tsconfig.json 존재 시)
-     - Node: `npx eslint . --format json` (eslint 설정 존재 시)
+     - TypeScript: `bunx tsc --noEmit` (tsconfig.json 존재 시)
+     - Node: `bunx eslint . --format json` (eslint 설정 존재 시)
      - Java: `./gradlew build` 또는 `mvn compile` (빌드 파일 존재 시)
    - 수집된 에러를 파일별로 그룹화하여 사용자에게 요약 표시
 

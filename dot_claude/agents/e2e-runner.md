@@ -25,10 +25,10 @@ model: sonnet
 
 ```typescript
 // 나쁨: 임의 대기
-await page.waitForTimeout(5000)
+await page.waitForTimeout(5000);
 
 // 좋음: 특정 조건 대기
-await page.waitForResponse(resp => resp.url().includes('/api/data'))
+await page.waitForResponse((resp) => resp.url().includes("/api/data"));
 ```
 
 ## 주요 명령어
