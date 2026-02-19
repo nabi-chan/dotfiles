@@ -382,8 +382,12 @@
 	<true/>
 	<key>EnableAPIServer</key>
 	<true/>
+	<key>EnableDivisionView</key>
+	<false/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
+	<key>HideMenuBarInFullscreen</key>
+	<true/>
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -2017,7 +2021,7 @@
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SshIntegrationForURLs</key>
@@ -2034,7 +2038,11 @@
 	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
+	<key>WindowNumber</key>
+	<false/>
 	<key>WrapDroppedFilenamesInQuotesWhenPasting</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 </dict>
 </plist>
