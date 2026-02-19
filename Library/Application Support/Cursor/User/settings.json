@@ -46,6 +46,7 @@
   "githubPullRequests.pullBranch": "never",
   "importCost.showCalculatingDecoration": false,
   "importCost.typescriptExtensions": ["\\.ts$", "\\.tsx?$"],
+  "java.compile.nullAnalysis.mode": "automatic",
   "java.configuration.detectJdksAtStart": true,
   "java.configuration.runtimes": [
     {
@@ -58,23 +59,20 @@
     }
   ],
   "java.configuration.updateBuildConfiguration": "automatic",
-  "java.compile.nullAnalysis.mode": "automatic",
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx32G -Xms512M -Xlog:disable",
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "json.schemaDownload.enable": true,
   "prettier.enable": true,
   "prettier.resolveGlobalModules": true,
   "redhat.telemetry.enabled": false,
   "security.promptForLocalFileProtocolHandling": false,
   "tailwindCSS.classFunctions": ["cva", "clsx", "cx", "cn"],
-  "terminal.external.osxExec": "iTerm.app",
   "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.confirmSaveUntitledWorkspace": true,
   "workbench.colorTheme": "Catppuccin Frappé",
   "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.iconTheme": "catppuccin-frappe",
-  "remote.SSH.remotePlatform": {
-    "nabi@10.10.128.1": "macOS"
-  }
+  "workbench.iconTheme": "catppuccin-frappe"
 }
