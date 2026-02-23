@@ -27,6 +27,9 @@ environment:
   ZSH_DOTENV_FILE: .env.local
   ZSH_DOTENV_PROMPT: false
 
+  # ssh
+  SSH_AUTH_SOCK: $HOME/.1password/agent.sock
+
   # claude code
   MAX_MCP_OUTPUT_TOKENS: "1000000"
   CLAUDE_CODE_MAX_OUTPUT_TOKENS: "1000000"
