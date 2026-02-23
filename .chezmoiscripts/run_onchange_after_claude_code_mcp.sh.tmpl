@@ -7,7 +7,7 @@ CLAUDE_SETTINGS="$HOME/.claude.json"
 
 [ -f "$CLAUDE_SETTINGS" ] || echo '{}' > "$CLAUDE_SETTINGS"
 
-cat <<'EOF' | yq -o=json | jq -s '.[0] * {mcpServers: .[1]} | .mcpServers |= walk(if type == "object" then with_entries(select(.value != null)) else . end)' "$CLAUDE_SETTINGS" - > "${CLAUDE_SETTINGS}.tmp"
+MCP_JSON=$(cat <<'EOF' | yq -o=json
 {{- range $name, $config := .mcp_servers }}
 "{{ $name }}":
   type: "{{ $config.type }}"
@@ -31,6 +31,9 @@ cat <<'EOF' | yq -o=json | jq -s '.[0] * {mcpServers: .[1]} | .mcpServers |= wal
 {{- end }}
 {{- end }}
 EOF
+)
+
+jq --argjson mcp "$MCP_JSON" '.mcpServers = ($mcp | walk(if type == "object" then with_entries(select(.value != null)) else . end))' "$CLAUDE_SETTINGS" > "${CLAUDE_SETTINGS}.tmp"
 
 mv "${CLAUDE_SETTINGS}.tmp" "$CLAUDE_SETTINGS"
 echo "Claude Code MCP servers synced successfully!"
