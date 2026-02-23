@@ -18,12 +18,12 @@
       "sudo *": "ask"
     },
     "external_directory": {
-      "~/.opencode-temp/**": "allow"
+      "/tmp/**": "allow",
+      "~/.opencode-temp/**": "allow",
+      "~/.claude-temp/**": "allow",
+      "~/Library/Application Support/CleanShot/media/**": "allow"
     }
   },
-  "plugin": [
-    "file://{{ .chezmoi.homeDir }}/.config/opencode/plugins/anthropic-1m.ts"
-  ],
   "theme": "one-dark",
   "default_agent": "plan",
   "formatter": {
