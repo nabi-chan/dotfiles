@@ -4,6 +4,7 @@
   "enabled_providers": ["anthropic", "openai"],
   "instructions": ["~/.config/opencode/rules/**/*.md"],
   "mcp": {{- template "opencode-mcp.json.tmpl" . }},
+  "plugin": ["opencode-anthropic-oauth"],
   "permission": {
     "bash": {
       "*": "allow",
@@ -30,6 +31,24 @@
     "prettier": {
       "command": ["bunx", "prettier", "--write", "$FILE"],
       "extensions": [".js", ".ts", ".jsx", ".tsx", ".css", ".json", ".md", ".html"]
+    }
+  },
+  "provider": {
+    "anthropic": {
+      "models": {
+        "claude-opus-4-6": {
+          "limit": { "context": 1000000, "output": 128000 },
+          "headers": {
+            "anthropic-beta": "context-1m-2025-08-07"
+          }
+        },
+        "claude-sonnet-4-6": {
+          "limit": { "context": 1000000, "output": 64000 },
+          "headers": {
+            "anthropic-beta": "context-1m-2025-08-07"
+          }
+        }
+      }
     }
   }
 }
