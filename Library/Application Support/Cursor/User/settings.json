@@ -2,6 +2,9 @@
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "cursor.cpp.enablePartialAccepts": true,
   "diffEditor.ignoreTrimWhitespace": true,
