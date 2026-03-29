@@ -10,6 +10,13 @@ aliases:
   gpc: gh pr create
   gpv: gh pr view
   gpm: gh pr merge && git pull --ff-only
+  # claude code
+  cc: claude
+  ccr: cc --resume
+  ccc: cc --continue
+  # opencode
+  oc: opencode
+  occ: oc --continue
   # scripts
   mkmaciso: curl -s https://raw.githubusercontent.com/LongQT-sea/mkmaciso/main/mkmaciso
 
