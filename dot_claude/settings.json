@@ -19,7 +19,10 @@
       "mcp__tools-pyhub-mcptools",
       "mcp__plugin_context7_context7"
     ],
-    "deny": ["Bash(ls:*)", "Bash(cat:*)"],
+    "deny": [
+      "Bash(ls:*)",
+      "Bash(cat:*)"
+    ],
     "ask": [
       "Bash(rm:*)",
       "Bash(mv:*)",
@@ -29,7 +32,6 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "opus",
   "hooks": {
     "Notification": [
       {
