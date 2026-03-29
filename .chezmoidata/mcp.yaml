@@ -11,16 +11,6 @@ mcp_servers:
       - stdio
       - --config
       - ~/.config/dbhub/dbhub.toml
-  documentation-aws:
-    type: stdio
-    command: mise
-    args:
-      - x
-      - pipx:awslabs.aws-documentation-mcp-server
-      - --
-      - awslabs.aws-documentation-mcp-server
-    environment:
-      AWS_DOCUMENTATION_PARTITION: aws
   documentation-shadcn:
     type: stdio
     command: mise
@@ -45,7 +35,3 @@ mcp_servers:
     args:
       - run
       - stdio
-  tools-excalidraw:
-    type: http
-    url: https://excalidraw-mcp-app.vercel.app/mcp
-

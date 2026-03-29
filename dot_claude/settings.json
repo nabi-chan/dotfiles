@@ -14,10 +14,8 @@
       "Write(~/.claude-temp/**)",
       "mcp__ide",
       "mcp__connector-database",
-      "mcp__documentation-aws",
       "mcp__documentation-shadcn",
       "mcp__tools-chrome",
-      "mcp__tools-excalidraw",
       "mcp__tools-pyhub-mcptools",
       "mcp__plugin_context7_context7"
     ],
@@ -29,7 +27,7 @@
       "Bash(chmod:*)",
       "Bash(sudo:*)"
     ],
-    "defaultMode": "plan"
+    "defaultMode": "auto"
   },
   "model": "opus",
   "hooks": {
