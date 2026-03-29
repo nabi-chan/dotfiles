@@ -7,8 +7,10 @@ tap "jesseduffield/lazygit"
 brew "bat"
 brew "btop"
 brew "chezmoi"
+brew "cocoapods"
 brew "doggo"
 brew "eza"
+brew "fd"
 brew "gh"
 brew "git"
 brew "gnupg"
@@ -17,14 +19,18 @@ brew "just"
 brew "lazygit"
 brew "mas"
 brew "mise"
+brew "mole"
 brew "mysql-client"
+brew "pango"
 brew "pv"
 brew "pygments"
 brew "sshpass"
 brew "starship"
 brew "tree"
+brew "watchman"
 brew "wget"
 brew "wireguard-tools"
+brew "xorriso"
 brew "yq"
 brew "zplug"
 brew "zstd"
@@ -33,11 +39,14 @@ brew "anomalyco/tap/opencode"
 # Cask
 cask "1password"
 cask "adobe-acrobat-pro"
+cask "android-commandlinetools"
 cask "android-studio"
 cask "balenaetcher"
+cask "chatgpt"
 cask "claude"
 cask "claude-code"
 cask "codex"
+cask "codex-app"
 cask "cursor"
 cask "discord"
 cask "figma"
@@ -54,16 +63,16 @@ cask "httpie-desktop"
 cask "iterm2"
 cask "itermai"
 cask "karabiner-elements"
+cask "league-of-legends"
 cask "logi-options+"
 cask "notion"
-cask "notion-calendar"
 cask "orbstack"
 cask "raycast"
 cask "screen-studio"
 cask "setapp"
 cask "slack"
+cask "steam"
 cask "tailscale-app"
-cask "utm"
 
 # Mac App Store
 mas "1Password for Safari", id: 1569813296
@@ -85,12 +94,11 @@ mas "Raycast Companion", id: 6738274497
 mas "Refined GitHub", id: 1519867270
 mas "Transporter", id: 1450874784
 mas "Windows App", id: 1295203466
-mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
-mas "반디집", id: 1265704574
-mas "유니콘", id: 1231935892
-mas "카카오톡", id: 869223134
-mas "카카오톡 (업무)", id: 869223134
+mas "반디집", id: 1265704574
+mas "유니콘", id: 1231935892
+mas "카카오톡", id: 869223134
+mas "카카오톡 (업무)", id: 869223134
 
 # VSCode
 vscode "1password.op-vscode"
@@ -110,10 +118,16 @@ vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "hashicorp.hcl"
 vscode "k--kato.intellij-idea-keybindings"
+vscode "mathiasfrohlich.kotlin"
 vscode "mechatroner.rainbow-csv"
 vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.autopep8"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode.hexeditor"
 vscode "openai.chatgpt"
 vscode "prisma.prisma"
