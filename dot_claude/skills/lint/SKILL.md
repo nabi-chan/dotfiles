@@ -2,7 +2,7 @@
 name: lint
 description: IDE 진단, tsc, ESLint, Java 빌드 에러 등 lint 오류를 수집하고 수정합니다.
 disable-model-invocation: true
-allowed-tools: Bash, Read, Edit, Grep, Glob, mcp__ide__getDiagnostics
+allowed-tools: Bash Read Edit Grep Glob mcp__ide__getDiagnostics
 ---
 
 # Lint/빌드 에러 수집 및 수정
@@ -29,7 +29,7 @@ allowed-tools: Bash, Read, Edit, Grep, Glob, mcp__ide__getDiagnostics
 
 ## 주의사항
 
-- 사용자가 명시적으로 `/fix-lint`를 호출한 경우에만 실행
+- 사용자가 명시적으로 `/lint`를 호출한 경우에만 실행
 - 원래 코드의 의도를 변경하지 않고 최소한으로 수정
 - cSpell(맞춤법) 경고는 무시하거나, 사용자에게 확인 후 처리
 - 빌드 설정 파일(build.gradle, pom.xml, tsconfig.json 등)은 수정하지 않음

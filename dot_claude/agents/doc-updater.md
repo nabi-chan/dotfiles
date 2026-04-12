@@ -1,7 +1,7 @@
 ---
 name: doc-updater
 description: 코드 변경에 따른 문서 업데이트
-tools: Read, Grep, Glob, Edit, Write
+tools: Read, Grep, Glob, Edit, Write, Bash
 model: sonnet
 ---
 

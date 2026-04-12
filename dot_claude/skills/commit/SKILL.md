@@ -2,7 +2,7 @@
 name: commit
 description: 현재 변경사항을 논리적 단위로 분리하여 각각 독립된 커밋으로 생성합니다.
 disable-model-invocation: true
-allowed-tools: Bash(git:*), Bash(/bin/ls:*), Bash(/bin/cat:*), AskUserQuestion
+allowed-tools: Bash(git:*) Bash(/bin/ls:*) Bash(/bin/cat:*) AskUserQuestion
 ---
 
 # 단위적 커밋 (Atomic Commits)
@@ -15,7 +15,7 @@ allowed-tools: Bash(git:*), Bash(/bin/ls:*), Bash(/bin/cat:*), AskUserQuestion
    - 관련 없는 변경은 반드시 별도 커밋으로 분리
    - 테스트 파일은 해당 구현 파일과 같은 커밋에 포함
 3. 각 그룹별로 파일 목록과 커밋 메시지 초안을 사용자에게 제시
-4. AskUserQuestion으로 사용자에게 확인 요청 (yes: 진행 / modify: 수정 / no: 취소)
+4. AskUserQuestion 도구로 사용자에게 확인 요청 (yes: 진행 / modify: 수정 / no: 취소)
 5. 사용자가 승인한 그룹만:
    - `git add`로 해당 파일만 스테이징
    - conventional commit 형식으로 커밋
@@ -26,11 +26,13 @@ allowed-tools: Bash(git:*), Bash(/bin/ls:*), Bash(/bin/cat:*), AskUserQuestion
 - 형식: `type: 설명` (단일 프로젝트), `type(scope): 설명` (모노레포)
 - type: feat, fix, chore, deps, refactor, docs, style
 - scope는 모노레포에서만 사용하며 폴더 경로를 지정 (예시: `apps/web`)
+  - scope가 여러개인 경우, 모두 기술 (예시: `apps/web, apps/server`)
 - 설명은 한국어로 작성
 - 본문이 필요한 경우 "왜" 변경했는지 기술
 
 ## 주의사항
 
+- **cat 명령어 절대 사용 금지**
 - /bin/cat 을 사용하여 커밋 메시지를 작성 (cat 명령어는 ANSI 컬러가 포함되어 있음)
 - **사용자 승인 없이 `git commit`을 실행하지 않는다** — 반드시 AskUserQuestion으로 확인 후 진행
 - `.env`, 시크릿 파일은 커밋하지 않기

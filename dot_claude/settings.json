@@ -1,9 +1,9 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "env": {
     "MAX_MCP_OUTPUT_TOKENS": "1000000",
     "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "1000000",
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
-    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "0"
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
   "permissions": {
     "allow": [
@@ -12,6 +12,8 @@
       "Bash",
       "Read(~/.claude-temp/**)",
       "Write(~/.claude-temp/**)",
+      "Read(~/nabi/obsidian/**)",
+      "Write(~/nabi/obsidian/**)",
       "mcp__ide",
       "mcp__connector-database",
       "mcp__documentation-shadcn",
@@ -19,10 +21,7 @@
       "mcp__tools-pyhub-mcptools",
       "mcp__plugin_context7_context7"
     ],
-    "deny": [
-      "Bash(ls:*)",
-      "Bash(cat:*)"
-    ],
+    "deny": ["Bash(ls:*)", "Bash(cat:*)"],
     "ask": [
       "Bash(rm:*)",
       "Bash(mv:*)",
@@ -32,6 +31,8 @@
     ],
     "defaultMode": "auto"
   },
+  "model": "opus[1m]",
+  "effortLevel": "high",
   "hooks": {
     "Notification": [
       {
@@ -45,11 +46,11 @@
     ],
     "PostToolUse": [
       {
-        "matcher": "tool == \"Edit\"",
+        "matcher": "Edit|Write",
         "hooks": [
           {
             "type": "command",
-            "command": "bunx prettier --write \"$CC_TOOL_INPUT_FILE_PATH\" --ignore-unknown"
+            "command": "pnpm dlx prettier --write \"$CC_TOOL_INPUT_FILE_PATH\" --ignore-unknown"
           }
         ]
       }
@@ -63,9 +64,12 @@
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true
   },
   "language": "Korean",
   "alwaysThinkingEnabled": true,
-  "teammateMode": "tmux"
+  "teammateMode": "tmux",
+  "prefersReducedMotion": true,
+  "spinnerTipsEnabled": false
 }

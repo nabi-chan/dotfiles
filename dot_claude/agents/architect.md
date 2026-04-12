@@ -1,7 +1,7 @@
 ---
 name: architect
 description: 시스템 아키텍처 설계, 기술 스택 선정, 구조적 의사결정
-tools: Read, Grep, Glob, WebSearch, WebFetch
+tools: Read, Grep, Glob, WebSearch, WebFetch, Write, Edit
 model: opus
 memory: project
 ---
