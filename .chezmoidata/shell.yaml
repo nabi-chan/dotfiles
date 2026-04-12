@@ -4,6 +4,7 @@ aliases:
   ls: eza
   dig: doggo
   # shortcuts
+  code: zed
   lg: lazygit
   j: just
   jg: just -g

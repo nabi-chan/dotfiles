@@ -1,0 +1,101 @@
+{
+  "edit_predictions": {
+    "provider": "copilot"
+  },
+  "terminal": {
+    "cursor_shape": "block",
+    "shell": "system"
+  },
+  "preview_tabs": {
+    "enable_preview_from_file_finder": true
+  },
+  "tabs": {
+    "file_icons": true
+  },
+  "title_bar": {
+    "show_user_picture": false,
+    "show_user_menu": false,
+    "show_sign_in": false,
+    "show_onboarding_banner": false,
+    "show_branch_icon": true
+  },
+  "status_bar": {
+    "show_active_file": false,
+    "active_encoding_button": "enabled"
+  },
+  "file_finder": {
+    "modal_max_width": "medium"
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "format_on_save": "on",
+  "tab_size": 2,
+  "prettier": {
+    "allowed": true
+  },
+  "document_symbols": "on",
+  "document_folding_ranges": "on",
+  "semantic_tokens": "combined",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 300
+    }
+  },
+  "show_wrap_guides": false,
+  "ui_font_size": 15.0,
+  "ui_font_family": ".SystemUIFont",
+  "buffer_line_height": "comfortable",
+  "buffer_font_size": 14.0,
+  "buffer_font_family": "JetBrainsMono Hangul Nerd Font",
+  "icon_theme": "Catppuccin Frappé",
+  "theme": "Catppuccin Frappé",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "restore_on_startup": "launchpad",
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "file_types": {
+    "JSON": ["json.tmpl"],
+    "TOML": ["toml.local"]
+  },
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "classFunctions": ["cva", "clsx", "cx", "cn"]
+      }
+    }
+  },
+  "languages": {
+    "Python": {
+      "formatter": "language_server"
+    }
+  },
+  "auto_install_extensions": {
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    "csv": true,
+    "dockerfile": true,
+    "emmet": true,
+    "git-firefly": true,
+    "hcl": true,
+    "html": true,
+    "java": true,
+    "just": true,
+    "kotlin": true,
+    "make": true,
+    "mdx": true,
+    "prisma": true,
+    "rainbow-csv": true,
+    "ruff": true,
+    "sql": true,
+    "toml": true,
+    "xml": true,
+    "ruby": true
+  }
+}
