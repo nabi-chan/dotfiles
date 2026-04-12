@@ -14,9 +14,7 @@ aliases:
   cc: claude
   ccr: cc --resume
   ccc: cc --continue
-  # opencode
-  oc: opencode
-  occ: oc --continue
+  cct: env CLAUDE_CODE_EFFORT_LEVEL=auto cc --teammate-mode=tmux
   # scripts
   mkmaciso: curl -s https://raw.githubusercontent.com/LongQT-sea/mkmaciso/main/mkmaciso
 
