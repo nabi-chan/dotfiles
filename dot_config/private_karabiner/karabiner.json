@@ -1,0 +1,107 @@
+{
+  "global": {
+    "enable_notification_window": false,
+    "show_in_menu_bar": false
+  },
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "cmd cmd -> fn",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "name": "key pressed",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": { "key_code": "right_option" },
+                "to": [{ "key_code": "fn" }],
+                "type": "basic"
+              },
+              {
+                "description": "to_delayed_action is set to 400ms in karabiner.json",
+                "from": {
+                  "key_code": "right_option",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "key pressed",
+                      "value": 1
+                    }
+                  },
+                  { "key_code": "right_option" }
+                ],
+                "to_delayed_action": {
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "key pressed",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "key pressed",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "shift + Esc, Tilde to ~",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": { "mandatory": ["shift"] }
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": ["shift"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 544,
+            "vendor_id": 1452
+          },
+          "ignore": false,
+          "simple_modifications": [
+            {
+              "from": { "key_code": "right_command" },
+              "to": [{ "key_code": "right_option" }]
+            }
+          ]
+        }
+      ],
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "indicate_sticky_modifier_keys_state": false,
+        "keyboard_type_v2": "ansi"
+      }
+    }
+  ]
+}

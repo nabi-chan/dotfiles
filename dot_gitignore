@@ -1,0 +1,16 @@
+# Mac OS
+.DS_Store
+
+# env
+.env
+
+# local files
+*.local
+*.local.*
+
+# agents
+.omo/
+.omc/
+.sisyphus/
+.codegraph/
+.playwright-mcp/

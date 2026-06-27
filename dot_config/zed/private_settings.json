@@ -1,0 +1,79 @@
+{
+  "edit_predictions": {
+    "provider": "copilot"
+  },
+  "base_keymap": "JetBrains",
+  "cli_default_open_behavior": "new_window",
+  "agent": {
+    "sidebar_side": "right",
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-5-mini",
+      "enable_thinking": false
+    },
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "terminal": {
+    "cursor_shape": "block",
+    "shell": "system"
+  },
+  "preview_tabs": {
+    "enable_preview_from_file_finder": true
+  },
+  "tabs": {
+    "file_icons": true
+  },
+  "title_bar": {
+    "show_branch_status_icon": true,
+    "show_user_picture": false,
+    "show_user_menu": false,
+    "show_sign_in": false,
+    "show_onboarding_banner": false
+  },
+  "status_bar": {
+    "show_active_file": false,
+    "active_encoding_button": "enabled"
+  },
+  "file_finder": {
+    "modal_max_width": "medium"
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "format_on_save": "on",
+  "tab_size": 2,
+  "prettier": {
+    "allowed": true
+  },
+  "document_symbols": "on",
+  "document_folding_ranges": "on",
+  "semantic_tokens": "combined",
+  "autosave": "on_focus_change",
+  "show_wrap_guides": false,
+  "ui_font_size": 15.0,
+  "ui_font_family": ".SystemUIFont",
+  "buffer_line_height": "comfortable",
+  "buffer_font_size": 14.0,
+  "buffer_font_family": "JetBrainsMono Hangul Nerd Font",
+  "icon_theme": "Catppuccin Frappé",
+  "theme": "Catppuccin Frappé",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "restore_on_startup": "launchpad",
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "classFunctions": ["cva", "clsx", "cx", "cn"]
+      }
+    }
+  }
+}

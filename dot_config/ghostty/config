@@ -1,0 +1,17 @@
+# Theme
+theme = "Catppuccin Frappe"
+
+# Font
+font-size = 13
+font-family = "JetBrainsMono Hangul Nerd Font"
+
+# Padding
+window-padding-balance = true
+window-padding-x = 16
+window-padding-y = 16
+
+# Working Directory
+working-directory = home
+
+# Ghostty xterm
+term = xterm-256color

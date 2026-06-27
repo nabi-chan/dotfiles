@@ -1,0 +1,48 @@
+[tools]
+# Languages
+node = "26"
+java = "26"
+python = "3.14"
+
+# package manager
+bun = "1"
+yarn = "4"
+uv = "0.11"
+pnpm = "11"
+
+# CLI
+gh = "latest"
+mas = "latest"
+turbo = "latest"
+mysql = "latest"
+flyway = "latest"
+vercel = "latest"
+chezmoi = "latest"
+lazygit = "latest"
+portless = "latest"
+prettier = "latest"
+1password = "latest"
+
+# Coding Tools
+codex = "latest"
+claude = "latest"
+opencode = "latest"
+
+# Tools
+yq = "latest"
+fd = "latest"
+bat = "latest"
+eza = "latest"
+just = "latest"
+doggo = "latest"
+ripgrep = "latest"
+"npm:prettier-pnp" = "latest"
+"aqua:ast-grep/ast-grep" = "latest"
+
+# MCP
+"npm:@bytebase/dbhub" = "latest"
+"npm:computer-use-mcp" = "latest"
+"npm:chrome-devtools-mcp" = "latest"
+
+# Ghostty
+starship = "latest"

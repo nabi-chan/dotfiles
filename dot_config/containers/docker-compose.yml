@@ -1,0 +1,15 @@
+name: container
+
+services:
+  mysql:
+    image: mysql:8
+    command: --local-infile=1
+    environment:
+      MYSQL_USER: eunsol
+      MYSQL_ROOT_PASSWORD: eunsol
+
+  postgresql:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: eunsol
+      POSTGRES_PASSWORD: eunsol

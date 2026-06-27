@@ -1,0 +1,84 @@
+aliases:
+  # ANSI color
+  cat: pygmentize -g
+  ls: eza
+  dig: doggo
+  # shortcuts
+  code: zed
+  lg: lazygit
+  j: just
+  jg: just -g
+  gpc: gh pr create
+  gpv: gh pr view
+  gpm: gh pr merge && git pull --ff-only
+  gos: open -na Ghostty.app
+  # opencode
+  oc: opencode
+  ocr: oc --resume
+  occ: oc --continue
+
+environment:
+  # path
+  BUN_INSTALL: $HOME/.bun
+  PNPM_HOME: $HOME/Library/pnpm
+  ANDROID_HOME: $HOME/Library/Android/sdk
+  MISE_HOME: $HOME/.local/share/mise/shims
+
+  # zplug
+  ZPLUG_HOME: $HOMEBREW_PREFIX/opt/zplug
+
+  # dotenv
+  ZSH_DOTENV_FILE: .env.local
+  ZSH_DOTENV_PROMPT: false
+
+  # ssh
+  SSH_AUTH_SOCK: $HOME/.1password/agent.sock
+
+  # claude
+  CAVEMAN_DEFAULT_MODE: ultra
+  ANTHROPIC_ENABLE_1M_CONTEXT: true
+
+paths:
+  # global paths
+  - $PNPM_HOME
+  - $MISE_HOME
+  - $BUN_INSTALL/bin
+  - $HOME/.local/bin
+  # android studio
+  - $ANDROID_HOME/tools
+  - $ANDROID_HOME/tools/bin
+  - $ANDROID_HOME/platform-tools
+
+zplug_plugins:
+  - name: plugins/mise
+    from: oh-my-zsh
+  - name: plugins/starship
+    from: oh-my-zsh
+  - name: plugins/dotenv
+    from: oh-my-zsh
+  - name: lib/key-bindings
+    from: oh-my-zsh
+  - name: lib/directories
+    from: oh-my-zsh
+  - name: plugins/bun
+    from: oh-my-zsh
+    defer: 2
+  - name: plugins/git
+    from: oh-my-zsh
+    defer: 2
+  - name: plugins/aws
+    from: oh-my-zsh
+    defer: 2
+  - name: plugins/docker
+    from: oh-my-zsh
+    defer: 2
+  - name: plugins/gh
+    from: oh-my-zsh
+    defer: 2
+  - name: lib/completion
+    from: oh-my-zsh
+    defer: 2
+  - name: zsh-users/zsh-autosuggestions
+    defer: 3
+  - name: zsh-users/zsh-syntax-highlighting
+    defer: 3

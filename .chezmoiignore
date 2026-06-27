@@ -1,0 +1,14 @@
+# agent generated codes
+.omo/
+.codegraph/
+
+# local docs
+README.md
+AGENTS.md
+
+# local files
+*.local
+*.local.*
+
+# mise
+mise.toml

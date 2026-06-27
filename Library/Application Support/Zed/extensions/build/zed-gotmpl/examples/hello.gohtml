@@ -1,0 +1,7 @@
+{{define "content"}}
+	<ul>
+		{{range .Subjects}}
+			<li>{{. | printf "Hello, %s!"}}!</li>
+		{{end}}
+	</ul>
+{{end}}

@@ -1,0 +1,9 @@
+gui:
+  nerdFontsVersion: "3"
+  mouseEvents: false
+
+git:
+  overrideGpg: true
+
+os:
+  editPreset: "zed"

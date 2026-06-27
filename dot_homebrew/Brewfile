@@ -1,0 +1,71 @@
+# Homebrew tap
+tap "steipete/tap", trusted: true
+tap "jundot/omlx", "https://github.com/jundot/omlx", trusted: true
+
+# Homebrew Formula
+brew "zstd"
+brew "cocoapods"
+brew "git"
+brew "gnupg"
+brew "jdtls"
+brew "mise"
+brew "mole"
+brew "php"
+brew "pygments"
+brew "sshpass"
+brew "tree"
+brew "watchman"
+brew "xcodegen"
+brew "zplug"
+brew "jundot/omlx/omlx"
+
+# Homebrew Cask
+cask "1password"
+cask "android-studio"
+cask "steipete/tap/codexbar"
+cask "discord"
+cask "figma"
+cask "ghostty"
+cask "google-chrome"
+cask "google-drive"
+cask "hancom-word"
+cask "hex-fiend"
+cask "httpie-desktop"
+cask "karabiner-elements"
+cask "league-of-legends"
+cask "obsidian"
+cask "openlogi"
+cask "orbstack"
+cask "raycast"
+cask "setapp"
+cask "slack"
+cask "tailscale-app"
+cask "visual-studio-code"
+cask "xcodes-app"
+cask "yubico-authenticator"
+cask "zed"
+
+# Mac App Store
+mas "Bitwarden", id: 1352778147
+mas "Draw Things", id: 6444050820
+mas "FileZilla Pro", id: 1298486723
+mas "KakaoTalkNew", id: 869223134
+mas "Keynote", id: 361285480
+mas "Magnet", id: 441258766
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "Numbers", id: 361304891
+mas "Pages", id: 361309726
+mas "RunCat", id: 1429033973
+mas "Structured", id: 1499198946
+mas "Windows App", id: 1295203466
+mas "반디집", id: 1265704574
+mas "카카오톡", id: 869223134
+
+# VSCode
+vscode "antfu.slidev"
+vscode "vue.volar"
+
+# npm
+npm "oh-my-claude-sisyphus"

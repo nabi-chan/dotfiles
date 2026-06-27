@@ -1,0 +1,13 @@
+{
+  "file_types": {
+    // dotfiles
+    "Git Config": ["dot_gitconfig"],
+    "Git Ignore": ["dot_gitignore", ".chezmoiignore"],
+
+    // Templates
+    "Go Template": ["*.tmpl"],
+    "Go Json Template": ["*.json.tmpl"],
+    "Go Toml Template": ["*.toml.tmpl"],
+    "Go Bash Template": ["dot_zshrc.tmpl", "dot_zprofile.tmpl"],
+  },
+}

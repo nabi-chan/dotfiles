@@ -1,0 +1,31 @@
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+[ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
+
+# Plugins
+{{- range .zplug_plugins }}
+zplug "{{ .name }}"{{- if hasKey . "from" }}, from:{{ .from }}{{- end }}{{- if hasKey . "defer" }}, defer:{{ .defer }}{{- end }}
+{{- end }}
+
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+
+zplug load
+
+# Paths
+{{- range .paths }}
+export PATH="{{ . }}:$PATH"
+{{- end }}
+
+# Aliases
+{{- range $key, $value := .aliases }}
+alias {{ $key }}='{{ $value }}'
+{{- end }}
+
+# Warp
+if [ "$TERM_PROGRAM" = "WarpTerminal" ]; then
+    printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh" } }\x9c'
+fi

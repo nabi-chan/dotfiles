@@ -1,0 +1,54 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": true,
+  "instructions": [
+    "~/.config/opencode/AGENTS.md",
+    "~/.config/opencode/rules/**/*.md",
+  ],
+  "mcp": {
+    "chrome-devtools": {
+      "command": ["chrome-devtools-mcp", "--slim", "--headless"],
+      "type": "local",
+    },
+    "computer-use": {
+      "command": ["computer-use-mcp"],
+      "type": "local",
+    },
+    "dbhub": {
+      "command": ["dbhub", "--config", "~/.config/dbhub/config.toml"],
+      "type": "local",
+    },
+    "figma": {
+      "enabled": false,
+      "type": "remote",
+      "url": "http://127.0.0.1:3845/sse",
+    },
+    "xcode": {
+      "command": ["xcrun", "mcpbridge"],
+      "enabled": false,
+      "type": "local",
+    },
+  },
+  "permission": {
+    "bash": {
+      "*": "allow",
+      "cat *": "deny",
+      "chmod *": "ask",
+      "chown *": "ask",
+      "ls *": "deny",
+      "mv *": "ask",
+      "rm *": "ask",
+      "sudo *": "ask",
+    },
+    "external_directory": {
+      "~/.cache/opencode/**": "allow",
+      "~/.config/opencode/**": "allow",
+      "~/.opencode-temp/**": "allow",
+    },
+  },
+  "plugin": [
+    "oh-my-openagent@latest",
+    "caveman-opencode-plugin@latest",
+    "opencode-claude-auth@latest",
+  ],
+}

@@ -1,0 +1,38 @@
+[user]
+	name = eunsol
+	email = hello@nabi.kim
+	signingkey = 4D070A693785CC6C0DE4A3AC003A8154E6FFF6CA
+
+[core]
+	excludesFile = ~/.gitignore
+	ignorecase = false
+
+[tag]
+	forceSignAnnotated = true
+
+[init]
+	defaultBranch = main
+
+[gpg]
+	program = /opt/homebrew/bin/gpg
+
+[commit]
+	gpgsign = true
+
+[push]
+	autoSetupRemote = true
+
+[http]
+	postBuffer = 524288000
+
+[remote]
+	prune = true
+
+[pull]
+	rebase = true
+
+[credential "https://github.com"]
+	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper = !/opt/homebrew/bin/gh auth git-credential

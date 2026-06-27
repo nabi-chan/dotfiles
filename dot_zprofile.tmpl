@@ -1,0 +1,7 @@
+eval "$(mise activate zsh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Environment
+{{- range $key, $value := .environment }}
+export {{ $key }}="{{ $value }}"
+{{- end }}

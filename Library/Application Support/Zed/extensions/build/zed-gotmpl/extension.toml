@@ -1,0 +1,11 @@
+id = "gotmpl"
+name = "Gotmpl"
+version = "0.0.2"
+schema_version = 1
+authors = ["Mahmud Ridwan <m@hjr265.me>"]
+description = "Go template support, includes text/template (gotmpl) and html/template (gohtml)."
+repository = "https://github.com/hjr265/zed-gotmpl"
+
+[grammars.gotmpl]
+repository = "https://github.com/ngalaiko/tree-sitter-go-template"
+rev = "5f19a36bb1eebb30454e277b222b278ceafed0dd"
