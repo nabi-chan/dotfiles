@@ -21,7 +21,7 @@
     "figma": {
       "enabled": false,
       "type": "remote",
-      "url": "http://127.0.0.1:3845/sse",
+      "url": "http://127.0.0.1:3845/mcp",
     },
     "xcode": {
       "command": ["xcrun", "mcpbridge"],
