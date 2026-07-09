@@ -70,6 +70,21 @@
   },
   "restore_on_startup": "launchpad",
   "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    },
     "tailwindcss-language-server": {
       "settings": {
         "classFunctions": ["cva", "clsx", "cx", "cn"]
