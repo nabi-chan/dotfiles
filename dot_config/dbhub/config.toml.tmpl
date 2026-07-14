@@ -8,6 +8,4 @@ lazy = true
 id = "postgres.local"
 dsn = "postgres://eunsol:eunsol@postgresql.container.orb.local:5432"
 
-{{ if stat "dot_config/dbhub/config.local.toml" }}
-{{- include "dot_config/dbhub/config.local.toml" }}
-{{- end }}
+{{ include "dot_config/dbhub/config.local.toml" }}
