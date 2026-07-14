@@ -7,8 +7,8 @@ README.md
 AGENTS.md
 
 # local files
-*.local
-*.local.*
+**/*.local
+**/*.local.*
 
 # mise
 mise.toml
