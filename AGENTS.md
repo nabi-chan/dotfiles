@@ -15,7 +15,8 @@ chezmoi source repo for macOS-oriented dotfiles. Core stack is chezmoi templates
 |-- .chezmoidata/shell.yaml     # zsh aliases, PATH entries, zplug plugin data
 |-- dot_zprofile.tmpl           # mise + Homebrew bootstrap, environment exports
 |-- dot_zshrc.tmpl              # zplug, PATH, aliases, Warp hook
-|-- dot_config/opencode/        # opencode config, global AGENTS.md, custom skills
+|-- dot_config/agent/           # shared agent rules + skills (single source; other tools symlink here)
+|-- dot_config/opencode/        # opencode runtime config; AGENTS.md/skills are symlinks
 |-- dot_config/{mise,just}/     # tool versions and global just recipes
 |-- dot_*/                      # rendered home-directory dotfiles and private app configs
 |-- Library/Application Support/ # app config copied into macOS support paths
@@ -33,9 +34,9 @@ chezmoi source repo for macOS-oriented dotfiles. Core stack is chezmoi templates
 | Git defaults/ignore | `dot_gitconfig`, `dot_gitignore` | `main`, signed commits/tags, global ignore/agent temp exclusions. |
 | opencode runtime config | `dot_config/opencode/opencode.jsonc` | MCPs, permissions, plugin list, instruction paths. |
 | opencode agent models | `dot_config/opencode/oh-my-openagent.json` | Agent/category model routing. |
-| opencode persona/rules | `dot_config/opencode/AGENTS.md` | This becomes `~/.config/opencode/AGENTS.md`; do not repurpose as repo docs. |
-| Custom skills | `dot_config/opencode/skills/` | Each skill owns `SKILL.md` plus optional data/scripts. |
-| UI/UX skill engine | `dot_config/opencode/skills/ui-ux-pro-max/` | See child `AGENTS.md`. |
+| Agent persona/rules (all tools) | `dot_config/agent/AGENTS.md` | Single source for Claude Code, Codex, opencode; the three tool paths are symlinks to it. Do not repurpose as repo docs. |
+| Custom skills | `dot_config/agent/skills/` | Single source; `~/.claude/skills`, `~/.config/opencode/skills`, `~/.codex/skills/<name>` are symlinks. Each skill owns `SKILL.md` plus optional data/scripts. |
+| UI/UX skill engine | `dot_config/agent/skills/ui-ux-pro-max/` | See child `AGENTS.md`. |
 | Private app configs | `dot_omlx/`, `dot_docker/`, `dot_orbstack/`, `dot_config/*private*` | Treat as sensitive even if tracked. |
 | Fonts | `.system-fonts/` | Binary assets; avoid text search/line-count assumptions. |
 
@@ -45,14 +46,14 @@ LSP was inactive and `codegraph_*` tools were unavailable during generation; ref
 
 | Symbol | Type | Location | Refs | Role |
 |--------|------|----------|------|------|
-| `BM25` | class | `dot_config/opencode/skills/ui-ux-pro-max/scripts/core.py` | n/a | Tokenize, index, score CSV search corpus. |
-| `CSV_CONFIG` / `STACK_CONFIG` | constants | `dot_config/opencode/skills/ui-ux-pro-max/scripts/core.py` | n/a | Domain-to-CSV routing and output columns. |
-| `search()` | function | `dot_config/opencode/skills/ui-ux-pro-max/scripts/core.py` | n/a | Domain search entry point. |
-| `search_stack()` | function | `dot_config/opencode/skills/ui-ux-pro-max/scripts/core.py` | n/a | Stack-specific guideline search. |
-| `DesignSystemGenerator` | class | `dot_config/opencode/skills/ui-ux-pro-max/scripts/design_system.py` | n/a | Aggregates product/style/color/landing/typography guidance. |
-| `persist_design_system()` | function | `dot_config/opencode/skills/ui-ux-pro-max/scripts/design_system.py` | n/a | Writes master/page override design-system docs. |
-| `format_output()` | function | `dot_config/opencode/skills/ui-ux-pro-max/scripts/search.py` | n/a | CLI output formatter. |
-| `rebuild_colors()` / `rebuild_ui_reasoning()` | functions | `dot_config/opencode/skills/ui-ux-pro-max/data/_sync_all.py` | n/a | Regenerate derived CSV rows from `products.csv`. |
+| `BM25` | class | `dot_config/agent/skills/ui-ux-pro-max/scripts/core.py` | n/a | Tokenize, index, score CSV search corpus. |
+| `CSV_CONFIG` / `STACK_CONFIG` | constants | `dot_config/agent/skills/ui-ux-pro-max/scripts/core.py` | n/a | Domain-to-CSV routing and output columns. |
+| `search()` | function | `dot_config/agent/skills/ui-ux-pro-max/scripts/core.py` | n/a | Domain search entry point. |
+| `search_stack()` | function | `dot_config/agent/skills/ui-ux-pro-max/scripts/core.py` | n/a | Stack-specific guideline search. |
+| `DesignSystemGenerator` | class | `dot_config/agent/skills/ui-ux-pro-max/scripts/design_system.py` | n/a | Aggregates product/style/color/landing/typography guidance. |
+| `persist_design_system()` | function | `dot_config/agent/skills/ui-ux-pro-max/scripts/design_system.py` | n/a | Writes master/page override design-system docs. |
+| `format_output()` | function | `dot_config/agent/skills/ui-ux-pro-max/scripts/search.py` | n/a | CLI output formatter. |
+| `rebuild_colors()` / `rebuild_ui_reasoning()` | functions | `dot_config/agent/skills/ui-ux-pro-max/data/_sync_all.py` | n/a | Regenerate derived CSV rows from `products.csv`. |
 
 ## CONVENTIONS
 
@@ -61,13 +62,14 @@ LSP was inactive and `codegraph_*` tools were unavailable during generation; ref
 - zsh templates use chezmoi Go-template ranges over `.environment`, `.paths`, `.aliases`, and `.zplug_plugins`.
 - No CI/test/lint pipeline was found; verification is mostly `chezmoi diff`, targeted CLI runs, and manual review.
 - opencode config is JSONC with trailing commas; preserve comments/trailing-comma style.
-- `dot_config/opencode/AGENTS.md` is an installed global instruction file, not a normal directory knowledge base.
+- `dot_config/agent/AGENTS.md` is an installed global instruction file shared by all three agent CLIs, not a normal directory knowledge base.
+- Tool-side rule/skill paths are chezmoi `symlink_*` sources; edit the real files under `dot_config/agent/` only.
 - `ui-ux-pro-max` keeps large CSV knowledge bases plus Python scripts; data changes can affect search/generation behavior.
 
 ## ANTI-PATTERNS (THIS PROJECT)
 
 - Do not paste private tokens/keys from tracked private config files into reports or generated docs.
-- Do not rewrite `dot_config/opencode/AGENTS.md` into generic project docs; it changes the user's global opencode behavior after chezmoi apply.
+- Do not rewrite `dot_config/agent/AGENTS.md` into generic project docs; it changes the global behavior of all three agent CLIs after chezmoi apply.
 - Do not run `chezmoi apply` casually; prefer `chezmoi diff` or dry-run first.
 - Do not treat font files as text; grep/line-count output on `.ttf` is noise.
 - Do not assume `rg` is available unless mise shims are active; fallback to `git grep`/`git ls-files` worked during generation.
@@ -84,8 +86,8 @@ LSP was inactive and `codegraph_*` tools were unavailable during generation; ref
 chezmoi diff
 chezmoi apply --dry-run
 just --justfile dot_config/just/justfile --list
-python3 dot_config/opencode/skills/ui-ux-pro-max/scripts/search.py "saas dashboard" --domain product --json
-python3 dot_config/opencode/skills/ui-ux-pro-max/data/_sync_all.py
+python3 dot_config/agent/skills/ui-ux-pro-max/scripts/search.py "saas dashboard" --domain product --json
+python3 dot_config/agent/skills/ui-ux-pro-max/data/_sync_all.py
 ```
 
 ## NOTES
@@ -93,4 +95,4 @@ python3 dot_config/opencode/skills/ui-ux-pro-max/data/_sync_all.py
 - Current working tree had pre-existing untracked `.zed/` during generation; leave it alone unless the user asks.
 - `dot_config/just/justfile` contains utility/macOS admin tasks, not test/lint tasks.
 - `dot_omlx/settings.json` and private config paths may contain live local secrets; summarize presence, not values.
-- Use `dot_config/opencode/skills/ui-ux-pro-max/AGENTS.md` for skill-engine-specific guidance instead of bloating this root file.
+- Use `dot_config/agent/skills/ui-ux-pro-max/AGENTS.md` for skill-engine-specific guidance instead of bloating this root file.

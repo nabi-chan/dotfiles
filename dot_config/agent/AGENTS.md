@@ -1,6 +1,9 @@
-<!-- USER:MIGRATED-FROM-CLAUDE:START -->
+# 전역 에이전트 규칙
 
-# 사용자 전역 규칙 (Claude Code에서 마이그레이션)
+Claude Code, Codex, opencode가 공유하는 단일 규칙 문서입니다.
+각 도구의 규칙 파일(`~/.claude/CLAUDE.md`, `~/.codex/AGENTS.md`, `~/.config/opencode/AGENTS.md`)은
+이 파일을 가리키는 심볼릭 링크이므로, 수정은 chezmoi 소스의
+`dot_config/agent/AGENTS.md`에서만 합니다.
 
 ## 일반
 
@@ -29,13 +32,11 @@
 
 ## 오케스트레이션
 
-- 오케스트레이터는 Codex 메인 세션이 담당하고, 워커 위임에는 Codex 서브에이전트를 사용하기
+- 오케스트레이터는 현재 메인 세션이 담당하고, 워커 위임은 그 세션에서 사용 가능한 서브에이전트를 사용하기
 - 독립적으로 병렬 수행 가능한 서브태스크가 2개 이상일 때 서브에이전트나 팀을 사용하기
 - 단순 순차 작업이나 서로 의존적인 작업은 위임 없이 직접 수행하기
 
 ## 임시 파일
 
-- 전역 임시 파일은 `~/.codex-temp/<목적>` 하위에 폴더로 관리하기
+- 전역 임시 파일은 `~/.agent-temp/<목적>` 하위에 폴더로 관리하기
 - 프로젝트별 임시 파일은 `./temp.local/<목적>` 하위에 폴더로 관리하기
-
-<!-- USER:MIGRATED-FROM-CLAUDE:END -->

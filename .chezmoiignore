@@ -12,3 +12,10 @@ AGENTS.md
 
 # mise
 mise.toml
+
+# codex system skills (런타임 생성, 공용 skills 디렉토리에 딸려 들어옴)
+.config/agent/skills/.system
+
+# python bytecode cache
+**/__pycache__
+**/*.pyc
