@@ -1,0 +1,57 @@
+model = "gpt-5.6-sol"
+model_reasoning_effort = "max"
+service_tier = "fast"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[projects."/Users/eunsol/cat-house/idohasugu"]
+trust_level = "trusted"
+
+[projects."/Users/eunsol/.local/share/chezmoi"]
+trust_level = "trusted"
+
+[projects."/Users/eunsol/workspaces/cat-house/idohasugu"]
+trust_level = "trusted"
+
+[projects."/Users/eunsol/cat-house/toras"]
+trust_level = "trusted"
+
+[projects."/Users/eunsol/cat-house/loghotel"]
+trust_level = "trusted"
+
+[projects."/Users/eunsol/workspaces/cat-house/slidev"]
+trust_level = "trusted"
+
+[projects."/Users/eunsol/workspaces/personal/soup"]
+trust_level = "trusted"
+
+[projects."/Users/eunsol/workspaces/cat-house/prideontheparty"]
+trust_level = "trusted"
+
+[projects."/Users/eunsol/workspaces/personal/marketing-ax"]
+trust_level = "trusted"
+
+[sandbox_workspace_write]
+writable_roots = ["/Users/eunsol/.codex-temp", "/Users/eunsol/.config/opencode"]
+
+[features]
+multi_agent = true
+
+[tui]
+notifications = true
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+startup_timeout_sec = 30
+
+[mcp_servers.chrome-devtools]
+command = "chrome-devtools-mcp"
+args = ["--slim", "--headless"]
+
+[mcp_servers.dbhub]
+command = "dbhub"
+args = ["--config", "/Users/eunsol/.config/dbhub/config.toml"]
