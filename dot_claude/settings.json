@@ -1,6 +1,9 @@
 {
   "permissions": {
-    "deny": ["Bash(cat:*)", "Bash(ls:*)"],
+    "deny": [
+      "Bash(cat:*)",
+      "Bash(ls:*)"
+    ],
     "ask": [
       "Bash(chmod:*)",
       "Bash(chown:*)",
@@ -9,17 +12,32 @@
       "Bash(sudo:*)"
     ],
     "defaultMode": "auto",
-    "additionalDirectories": ["~/.claude-temp/", "~/.config/opencode/"]
+    "additionalDirectories": [
+      "~/.claude-temp/",
+      "~/.config/opencode/"
+    ]
   },
-  "model": "opusplan",
+  "model": "opus",
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
-    "swift-lsp@claude-plugins-official": true
+    "swift-lsp@claude-plugins-official": true,
+    "codex@openai-codex": true,
+    "frontend-design@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    }
   },
   "language": "한국어",
-  "advisorModel": "fable",
   "askUserQuestionTimeout": "60s",
   "tui": "fullscreen",
+  "skipWorkflowUsageWarning": true,
   "theme": "auto",
   "editorMode": "normal",
   "teammateMode": "auto",
