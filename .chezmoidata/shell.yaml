@@ -1,7 +1,5 @@
 aliases:
   # ANSI color
-  cat: pygmentize -g
-  ls: eza
   dig: doggo
   # shortcuts
   code: zed
@@ -16,6 +14,11 @@ aliases:
   oc: opencode
   ocr: oc --resume
   occ: oc --continue
+
+# ghostty 에서만 적용 (에이전트 등 비대화형 셸에서 ANSI 색상 출력 방지)
+ghostty_aliases:
+  cat: pygmentize -g
+  ls: eza
 
 environment:
   # path

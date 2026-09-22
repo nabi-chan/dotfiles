@@ -25,3 +25,10 @@ export PATH="{{ . }}:$PATH"
 alias {{ $key }}='{{ $value }}'
 {{- end }}
 
+# Aliases (ghostty only)
+if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
+{{- range $key, $value := .ghostty_aliases }}
+  alias {{ $key }}='{{ $value }}'
+{{- end }}
+fi
+
