@@ -18,7 +18,7 @@
     {
       "enabled" : true,
       "id" : "claude",
-      "source" : "oauth"
+      "source" : "auto"
     },
     {
       "enabled" : false,
@@ -95,10 +95,6 @@
     {
       "enabled" : false,
       "id" : "jetbrains"
-    },
-    {
-      "enabled" : false,
-      "id" : "kimik2"
     },
     {
       "enabled" : false,
@@ -226,11 +222,63 @@
     },
     {
       "enabled" : false,
-      "id" : "crossmodel"
+      "id" : "clawrouter"
     },
     {
       "enabled" : false,
-      "id" : "clawrouter"
+      "id" : "clinepass"
+    },
+    {
+      "enabled" : false,
+      "id" : "qwencloud"
+    },
+    {
+      "enabled" : false,
+      "id" : "fireworks"
+    },
+    {
+      "enabled" : false,
+      "id" : "deepinfra"
+    },
+    {
+      "enabled" : false,
+      "id" : "neuralwatt"
+    },
+    {
+      "enabled" : false,
+      "id" : "longcat"
+    },
+    {
+      "enabled" : false,
+      "id" : "sub2api"
+    },
+    {
+      "enabled" : false,
+      "id" : "wayfinder"
+    },
+    {
+      "enabled" : false,
+      "id" : "zenmux"
+    },
+    {
+      "enabled" : false,
+      "id" : "aiand"
+    },
+    {
+      "enabled" : false,
+      "id" : "zoommate"
+    },
+    {
+      "enabled" : false,
+      "id" : "xai"
+    },
+    {
+      "enabled" : false,
+      "id" : "notion"
+    },
+    {
+      "enabled" : false,
+      "id" : "ibmbob"
     }
   ],
   "version" : 1

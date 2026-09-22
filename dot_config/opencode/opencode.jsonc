@@ -32,10 +32,8 @@
   "permission": {
     "bash": {
       "*": "allow",
-      "cat *": "deny",
       "chmod *": "ask",
       "chown *": "ask",
-      "ls *": "deny",
       "mv *": "ask",
       "rm *": "ask",
       "sudo *": "ask",

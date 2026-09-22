@@ -4,33 +4,6 @@ service_tier = "fast"
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
 
-[projects."/Users/eunsol/cat-house/idohasugu"]
-trust_level = "trusted"
-
-[projects."/Users/eunsol/.local/share/chezmoi"]
-trust_level = "trusted"
-
-[projects."/Users/eunsol/workspaces/cat-house/idohasugu"]
-trust_level = "trusted"
-
-[projects."/Users/eunsol/cat-house/toras"]
-trust_level = "trusted"
-
-[projects."/Users/eunsol/cat-house/loghotel"]
-trust_level = "trusted"
-
-[projects."/Users/eunsol/workspaces/cat-house/slidev"]
-trust_level = "trusted"
-
-[projects."/Users/eunsol/workspaces/personal/soup"]
-trust_level = "trusted"
-
-[projects."/Users/eunsol/workspaces/cat-house/prideontheparty"]
-trust_level = "trusted"
-
-[projects."/Users/eunsol/workspaces/personal/marketing-ax"]
-trust_level = "trusted"
-
 [sandbox_workspace_write]
 writable_roots = ["/Users/eunsol/.codex-temp", "/Users/eunsol/.config/opencode"]
 
@@ -55,3 +28,30 @@ args = ["--slim", "--headless"]
 [mcp_servers.dbhub]
 command = "dbhub"
 args = ["--config", "/Users/eunsol/.config/dbhub/config.toml"]
+
+[hooks.state]
+
+[hooks.state."/Users/eunsol/.codex/hooks.json:pre_tool_use:0:0"]
+trusted_hash = "sha256:95775fc9428d1b49d20678675f3c938eee61cdffee4f2593c5eb4f5b88c0cd7a"
+
+[hooks.state."/Users/eunsol/.codex/hooks.json:permission_request:0:0"]
+trusted_hash = "sha256:dce187491d1a50d1467c62ed78e63904a8c0d9ec5c03a9108cd98705aa440943"
+
+[hooks.state."/Users/eunsol/.codex/hooks.json:post_tool_use:0:0"]
+trusted_hash = "sha256:833f9e62da7897e6a6b597b04cc6d63f05ce451c80fa6342d09d85462d667d40"
+
+[hooks.state."/Users/eunsol/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:6501f101f9e7543d028ee953ec6caa5f51eedf2588fee7922860c09a88563093"
+
+[hooks.state."/Users/eunsol/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:81d726867dcb0cca01d7e22d794207a47731a2821d5fa67fa7da2cbedbceae41"
+
+[hooks.state."/Users/eunsol/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:d047e3fc28abc2cf11963f87475e5b0784311823e7abdf4402f731a8204ee6ba"
+
+[hooks.state."/Users/eunsol/.codex/hooks.json:subagent_stop:0:0"]
+trusted_hash = "sha256:d619d6ba2e9a3b94ed67619206ceb6ff96392b1f57eccbe3c6450a2c90bb3b99"
+
+[hooks.state."/Users/eunsol/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:6167608a47443a43ea660de02204bd2b6fc803b42ca15aabc1210690600c6960"
+

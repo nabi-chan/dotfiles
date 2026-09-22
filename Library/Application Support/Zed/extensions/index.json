@@ -4,7 +4,7 @@
       "manifest": {
         "id": "catppuccin",
         "name": "Catppuccin",
-        "version": "0.2.25",
+        "version": "0.2.27",
         "schema_version": 1,
         "description": "🦀 Soothing pastel theme for Zed",
         "repository": "https://github.com/catppuccin/zed",
@@ -34,7 +34,7 @@
       "manifest": {
         "id": "catppuccin-icons",
         "name": "Catppuccin Icons",
-        "version": "1.23.1",
+        "version": "1.24.0",
         "schema_version": 1,
         "description": "🦊 Soothing pastel icons for Zed",
         "repository": "https://github.com/catppuccin/zed-icons",
@@ -98,9 +98,9 @@
       "manifest": {
         "id": "dockerfile",
         "name": "Dockerfile",
-        "version": "0.2.1",
+        "version": "0.3.0",
         "schema_version": 1,
-        "description": "Dockerfile support.",
+        "description": "Dockerfile and Docker Compose support.",
         "repository": "https://github.com/zed-extensions/dockerfile",
         "authors": [
           "d1y <chenhonzho@gmail.com>",
@@ -113,12 +113,18 @@
         "themes": [],
         "icon_themes": [],
         "languages": [
+          "languages/docker-compose",
           "languages/dockerfile"
         ],
         "grammars": {
           "dockerfile": {
             "repository": "https://github.com/camdencheek/tree-sitter-dockerfile",
             "rev": "868e44ce378deb68aac902a9db68ff82d2299dd0",
+            "path": null
+          },
+          "yaml": {
+            "repository": "https://github.com/zed-industries/tree-sitter-yaml",
+            "rev": "baff0b51c64ef6a1fb1f8390f3ad6015b83ec13a",
             "path": null
           }
         },
@@ -131,7 +137,7 @@
             ],
             "language_ids": {
               "Dockerfile": "dockerfile",
-              "Docker Compose": "docker-compose"
+              "Docker Compose": "dockercompose"
             },
             "code_action_kinds": null
           },
@@ -158,7 +164,7 @@
       "manifest": {
         "id": "emmet",
         "name": "Emmet",
-        "version": "0.0.13",
+        "version": "0.0.14",
         "schema_version": 1,
         "description": "Emmet support",
         "repository": "https://github.com/zed-extensions/emmet",
@@ -195,6 +201,7 @@
               "SCSS",
               "Statamic Antlers",
               "TSX",
+              "Twig",
               "Vue.js"
             ],
             "language_ids": {
@@ -211,6 +218,7 @@
               "TSX": "typescriptreact",
               "Django": "html",
               "Jinja2": "html",
+              "Twig": "twig",
               "Statamic Antlers": "html",
               "JavaScript": "javascriptreact",
               "Elixir": "elixir",
@@ -232,7 +240,7 @@
       "manifest": {
         "id": "git-firefly",
         "name": "Git Firefly",
-        "version": "0.1.8",
+        "version": "0.1.9",
         "schema_version": 1,
         "description": "Provides Git Syntax Highlighting",
         "repository": "https://github.com/d1y/git_firefly",
@@ -255,7 +263,7 @@
         "grammars": {
           "git_config": {
             "repository": "https://github.com/the-mikedavis/tree-sitter-git-config",
-            "rev": "0fbc9f99d5a28865f9de8427fb0672d66f9d83a5",
+            "rev": "3a61756a81a86291a0f48e3eeeaa0692b9981aa9",
             "path": null
           },
           "git_rebase": {
@@ -332,7 +340,7 @@
       "manifest": {
         "id": "html",
         "name": "HTML",
-        "version": "0.3.1",
+        "version": "0.3.2",
         "schema_version": 1,
         "description": "HTML support.",
         "repository": "https://github.com/zed-industries/zed",
@@ -377,7 +385,7 @@
       "manifest": {
         "id": "java",
         "name": "Java",
-        "version": "6.8.21",
+        "version": "6.8.27",
         "schema_version": 1,
         "description": "Java support.",
         "repository": "https://github.com/zed-extensions/java",
@@ -391,13 +399,25 @@
         "themes": [],
         "icon_themes": [],
         "languages": [
+          "languages/gradle-kts",
+          "languages/java",
           "languages/properties",
-          "languages/java"
+          "languages/gradle"
         ],
         "grammars": {
+          "groovy": {
+            "repository": "https://github.com/murtaza64/tree-sitter-groovy",
+            "rev": "deb0dcf8c4544f07564060f6e9b9f6e4b0bfc27d",
+            "path": null
+          },
           "java": {
             "repository": "https://github.com/tree-sitter/tree-sitter-java",
             "rev": "94703d5a6bed02b98e438d7cad1136c01a60ba2c",
+            "path": null
+          },
+          "kotlin": {
+            "repository": "https://github.com/fwcd/tree-sitter-kotlin",
+            "rev": "4e909d6cc9ac96b4eaecb3fb538eaca48e9e9ee9",
             "path": null
           },
           "properties": {
@@ -407,6 +427,15 @@
           }
         },
         "language_servers": {
+          "gradle-language-server": {
+            "language": null,
+            "languages": [
+              "Gradle",
+              "Gradle KTS"
+            ],
+            "language_ids": {},
+            "code_action_kinds": null
+          },
           "jdtls": {
             "language": "Java",
             "languages": [],
@@ -473,9 +502,9 @@
       "manifest": {
         "id": "json5",
         "name": "JSON5",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "schema_version": 1,
-        "description": "JSON5 syntax highlighting support to Zed using Joakker's Tree-sitter.",
+        "description": "JSON5 language support for Zed using Joakker's Tree-sitter grammar.",
         "repository": "https://github.com/ChunzhengLab/json5-zed-extension",
         "authors": [
           "Chunzheng Wang <chunzheng.wang@icloud.com>"
@@ -671,7 +700,7 @@
       "manifest": {
         "id": "php",
         "name": "PHP",
-        "version": "0.4.10",
+        "version": "0.5.4",
         "schema_version": 1,
         "description": "PHP support.",
         "repository": "https://github.com/zed-extensions/php",
@@ -685,8 +714,8 @@
         "themes": [],
         "icon_themes": [],
         "languages": [
-          "languages/php",
-          "languages/phpdoc"
+          "languages/phpdoc",
+          "languages/php"
         ],
         "grammars": {
           "php": {
@@ -702,24 +731,50 @@
         },
         "language_servers": {
           "intelephense": {
-            "language": "PHP",
-            "languages": [],
+            "language": null,
+            "languages": [
+              "PHP",
+              "Blade"
+            ],
             "language_ids": {
-              "PHP": "php"
+              "PHP": "php",
+              "Blade": "blade"
             },
             "code_action_kinds": null
           },
           "phpactor": {
-            "language": "PHP",
-            "languages": [],
-            "language_ids": {},
+            "language": null,
+            "languages": [
+              "PHP",
+              "Blade"
+            ],
+            "language_ids": {
+              "PHP": "php",
+              "Blade": "blade"
+            },
+            "code_action_kinds": null
+          },
+          "phpantom": {
+            "language": null,
+            "languages": [
+              "PHP",
+              "Blade"
+            ],
+            "language_ids": {
+              "PHP": "php",
+              "Blade": "blade"
+            },
             "code_action_kinds": null
           },
           "phptools": {
-            "language": "PHP",
-            "languages": [],
+            "language": null,
+            "languages": [
+              "PHP",
+              "Blade"
+            ],
             "language_ids": {
-              "PHP": "php"
+              "PHP": "php",
+              "Blade": "blade"
             },
             "code_action_kinds": null
           }
@@ -740,7 +795,7 @@
       "manifest": {
         "id": "prisma",
         "name": "Prisma",
-        "version": "0.1.8",
+        "version": "0.1.10",
         "schema_version": 1,
         "description": "Prisma support.",
         "repository": "https://github.com/zed-extensions/prisma",
@@ -836,7 +891,7 @@
       "manifest": {
         "id": "ruby",
         "name": "Ruby",
-        "version": "0.16.14",
+        "version": "0.16.19",
         "schema_version": 1,
         "description": "Ruby support.",
         "repository": "https://github.com/zed-extensions/ruby",
@@ -850,12 +905,12 @@
         "themes": [],
         "icon_themes": [],
         "languages": [
-          "languages/erb",
-          "languages/html-erb",
-          "languages/ruby",
           "languages/yaml-erb",
           "languages/rbs",
-          "languages/js-erb"
+          "languages/ruby",
+          "languages/html-erb",
+          "languages/js-erb",
+          "languages/erb"
         ],
         "grammars": {
           "embedded_template": {
@@ -914,10 +969,12 @@
               "ERB",
               "HTML+ERB",
               "YAML+ERB",
-              "JS+ERB"
+              "JS+ERB",
+              "Slim"
             ],
             "language_ids": {
               "ERB": "erb",
+              "Slim": "slim",
               "Ruby": "ruby",
               "JS+ERB": "erb",
               "HTML+ERB": "erb",
@@ -1036,7 +1093,7 @@
       "manifest": {
         "id": "sql",
         "name": "SQL",
-        "version": "1.1.7",
+        "version": "1.1.8",
         "schema_version": 1,
         "description": "SQL language support.",
         "repository": "https://github.com/zed-extensions/sql",
@@ -1058,7 +1115,7 @@
         "grammars": {
           "sql": {
             "repository": "https://github.com/DerekStride/tree-sitter-sql",
-            "rev": "4a99c73f5384f2be10adc55208c84d95a7eb1137",
+            "rev": "851e9cb257ba7c66cc8c14214a31c44d2f1e954e",
             "path": null
           }
         },
@@ -1074,7 +1131,7 @@
       "manifest": {
         "id": "swift",
         "name": "Swift",
-        "version": "0.4.9",
+        "version": "0.4.11",
         "schema_version": 1,
         "description": "Swift support.",
         "repository": "https://github.com/zed-extensions/swift",
@@ -1100,9 +1157,21 @@
         },
         "language_servers": {
           "sourcekit-lsp": {
-            "language": "Swift",
-            "languages": [],
-            "language_ids": {},
+            "language": null,
+            "languages": [
+              "Swift",
+              "C",
+              "C++",
+              "Objective-C",
+              "Objective-C++"
+            ],
+            "language_ids": {
+              "Objective-C++": "objective-cpp",
+              "Objective-C": "objective-c",
+              "Swift": "swift",
+              "C++": "cpp",
+              "C": "c"
+            },
             "code_action_kinds": null
           }
         },
@@ -1203,7 +1272,7 @@
       "manifest": {
         "id": "vue",
         "name": "Vue",
-        "version": "0.3.6",
+        "version": "0.4.0",
         "schema_version": 1,
         "description": "Vue support.",
         "repository": "https://github.com/zed-extensions/vue",
@@ -1240,6 +1309,85 @@
             ]
           }
         },
+        "context_servers": {},
+        "slash_commands": {},
+        "snippets": null,
+        "capabilities": []
+      },
+      "dev": false
+    },
+    "windows-batch": {
+      "manifest": {
+        "id": "windows-batch",
+        "name": "Windows Batch",
+        "version": "0.3.0",
+        "schema_version": 1,
+        "description": "Windows Batch/CMD script support",
+        "repository": "https://github.com/PleahMaCaka/zed-batch",
+        "authors": [
+          "PleahMaCaka <pleahmacaka@gmail.com>"
+        ],
+        "lib": {
+          "kind": "Rust",
+          "version": "0.7.0"
+        },
+        "themes": [],
+        "icon_themes": [],
+        "languages": [
+          "languages/batch"
+        ],
+        "grammars": {
+          "batch": {
+            "repository": "https://github.com/pleahmacaka/tree-sitter-batch",
+            "rev": "01d27f527b7804b631c3ee50890a6407e68b849b",
+            "path": null
+          }
+        },
+        "language_servers": {
+          "batch-language-server": {
+            "language": null,
+            "languages": [
+              "Batch"
+            ],
+            "language_ids": {},
+            "code_action_kinds": null
+          }
+        },
+        "context_servers": {},
+        "slash_commands": {},
+        "snippets": null,
+        "capabilities": []
+      },
+      "dev": false
+    },
+    "xml": {
+      "manifest": {
+        "id": "xml",
+        "name": "XML",
+        "version": "0.1.1",
+        "schema_version": 1,
+        "description": "XML syntax support.",
+        "repository": "https://github.com/sweetppro/zed-xml",
+        "authors": [
+          "sweetppro"
+        ],
+        "lib": {
+          "kind": null,
+          "version": null
+        },
+        "themes": [],
+        "icon_themes": [],
+        "languages": [
+          "languages/xml"
+        ],
+        "grammars": {
+          "xml": {
+            "repository": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
+            "rev": "5000ae8f22d11fbe93939b05c1e37cf21117162d",
+            "path": "xml"
+          }
+        },
+        "language_servers": {},
         "context_servers": {},
         "slash_commands": {},
         "snippets": null,
@@ -1287,7 +1435,15 @@
       "extension": "catppuccin-icons",
       "path": "icon_themes/catppuccin-icons.json"
     },
+    "Catppuccin Frappé Monochrome": {
+      "extension": "catppuccin-icons",
+      "path": "icon_themes/catppuccin-icons.json"
+    },
     "Catppuccin Latte": {
+      "extension": "catppuccin-icons",
+      "path": "icon_themes/catppuccin-icons.json"
+    },
+    "Catppuccin Latte Monochrome": {
       "extension": "catppuccin-icons",
       "path": "icon_themes/catppuccin-icons.json"
     },
@@ -1295,12 +1451,35 @@
       "extension": "catppuccin-icons",
       "path": "icon_themes/catppuccin-icons.json"
     },
+    "Catppuccin Macchiato Monochrome": {
+      "extension": "catppuccin-icons",
+      "path": "icon_themes/catppuccin-icons.json"
+    },
     "Catppuccin Mocha": {
+      "extension": "catppuccin-icons",
+      "path": "icon_themes/catppuccin-icons.json"
+    },
+    "Catppuccin Mocha Monochrome": {
       "extension": "catppuccin-icons",
       "path": "icon_themes/catppuccin-icons.json"
     }
   },
   "languages": {
+    "Batch": {
+      "extension": "windows-batch",
+      "path": "languages/batch",
+      "matcher": {
+        "path_suffixes": [
+          "bat",
+          "cmd"
+        ],
+        "first_line_pattern": "(?i)^(@?echo off|rem |::)",
+        "modeline_aliases": []
+      },
+      "hidden": false,
+      "grammar": "batch",
+      "query_files": 13
+    },
     "CSV": {
       "extension": "csv",
       "path": "languages/csv",
@@ -1312,7 +1491,25 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "csv"
+      "grammar": "csv",
+      "query_files": 1
+    },
+    "Docker Compose": {
+      "extension": "dockerfile",
+      "path": "languages/docker-compose",
+      "matcher": {
+        "path_suffixes": [
+          "docker-compose.yml",
+          "docker-compose.yaml",
+          "compose.yaml",
+          "compose.yml"
+        ],
+        "first_line_pattern": null,
+        "modeline_aliases": []
+      },
+      "hidden": false,
+      "grammar": "yaml",
+      "query_files": 231
     },
     "Dockerfile": {
       "extension": "dockerfile",
@@ -1327,7 +1524,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "dockerfile"
+      "grammar": "dockerfile",
+      "query_files": 17
     },
     "ERB": {
       "extension": "ruby",
@@ -1340,7 +1538,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "embedded_template"
+      "grammar": "embedded_template",
+      "query_files": 17
     },
     "Git Attributes": {
       "extension": "git-firefly",
@@ -1356,7 +1555,8 @@
         ]
       },
       "hidden": false,
-      "grammar": "gitattributes"
+      "grammar": "gitattributes",
+      "query_files": 17
     },
     "Git Config": {
       "extension": "git-firefly",
@@ -1374,7 +1574,8 @@
         ]
       },
       "hidden": false,
-      "grammar": "git_config"
+      "grammar": "git_config",
+      "query_files": 17
     },
     "Git Ignore": {
       "extension": "git-firefly",
@@ -1401,7 +1602,8 @@
         ]
       },
       "hidden": false,
-      "grammar": "gitignore"
+      "grammar": "gitignore",
+      "query_files": 17
     },
     "Git Rebase": {
       "extension": "git-firefly",
@@ -1416,7 +1618,8 @@
         ]
       },
       "hidden": false,
-      "grammar": "git_rebase"
+      "grammar": "git_rebase",
+      "query_files": 17
     },
     "Go Bash Template": {
       "extension": "gotmpl",
@@ -1434,7 +1637,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "gotmpl"
+      "grammar": "gotmpl",
+      "query_files": 19
     },
     "Go CSS Template": {
       "extension": "gotmpl",
@@ -1449,7 +1653,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "gotmpl"
+      "grammar": "gotmpl",
+      "query_files": 19
     },
     "Go HTML Template": {
       "extension": "gotmpl",
@@ -1466,7 +1671,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "gotmpl"
+      "grammar": "gotmpl",
+      "query_files": 19
     },
     "Go JSON Template": {
       "extension": "gotmpl",
@@ -1481,7 +1687,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "gotmpl"
+      "grammar": "gotmpl",
+      "query_files": 19
     },
     "Go JavaScript Template": {
       "extension": "gotmpl",
@@ -1496,7 +1703,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "gotmpl"
+      "grammar": "gotmpl",
+      "query_files": 19
     },
     "Go SQL Template": {
       "extension": "gotmpl",
@@ -1511,7 +1719,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "gotmpl"
+      "grammar": "gotmpl",
+      "query_files": 19
     },
     "Go TOML Template": {
       "extension": "gotmpl",
@@ -1526,7 +1735,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "gotmpl"
+      "grammar": "gotmpl",
+      "query_files": 19
     },
     "Go Template": {
       "extension": "gotmpl",
@@ -1541,7 +1751,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "gotmpl"
+      "grammar": "gotmpl",
+      "query_files": 19
     },
     "Go Text Template": {
       "extension": "gotmpl",
@@ -1558,7 +1769,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "gotmpl"
+      "grammar": "gotmpl",
+      "query_files": 3
     },
     "Go TypeScript Template": {
       "extension": "gotmpl",
@@ -1573,7 +1785,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "gotmpl"
+      "grammar": "gotmpl",
+      "query_files": 19
     },
     "Go XML Template": {
       "extension": "gotmpl",
@@ -1588,7 +1801,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "gotmpl"
+      "grammar": "gotmpl",
+      "query_files": 19
     },
     "Go YAML Template": {
       "extension": "gotmpl",
@@ -1606,7 +1820,36 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "gotmpl"
+      "grammar": "gotmpl",
+      "query_files": 19
+    },
+    "Gradle": {
+      "extension": "java",
+      "path": "languages/gradle",
+      "matcher": {
+        "path_suffixes": [
+          "gradle"
+        ],
+        "first_line_pattern": null,
+        "modeline_aliases": []
+      },
+      "hidden": false,
+      "grammar": "groovy",
+      "query_files": 13
+    },
+    "Gradle KTS": {
+      "extension": "java",
+      "path": "languages/gradle-kts",
+      "matcher": {
+        "path_suffixes": [
+          "gradle.kts"
+        ],
+        "first_line_pattern": null,
+        "modeline_aliases": []
+      },
+      "hidden": false,
+      "grammar": "kotlin",
+      "query_files": 63
     },
     "HTML": {
       "extension": "html",
@@ -1621,7 +1864,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "html"
+      "grammar": "html",
+      "query_files": 63
     },
     "HTML+ERB": {
       "extension": "ruby",
@@ -1634,7 +1878,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "embedded_template"
+      "grammar": "embedded_template",
+      "query_files": 17
     },
     "JS+ERB": {
       "extension": "ruby",
@@ -1647,7 +1892,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "embedded_template"
+      "grammar": "embedded_template",
+      "query_files": 17
     },
     "JSON Lines": {
       "extension": "jsonl",
@@ -1661,7 +1907,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "json"
+      "grammar": "json",
+      "query_files": 1
     },
     "JSON5": {
       "extension": "json5",
@@ -1674,7 +1921,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "json5"
+      "grammar": "json5",
+      "query_files": 639
     },
     "Java": {
       "extension": "java",
@@ -1687,7 +1935,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "java"
+      "grammar": "java",
+      "query_files": 703
     },
     "Jinja2": {
       "extension": "jinja2",
@@ -1701,7 +1950,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "jinja2"
+      "grammar": "jinja2",
+      "query_files": 27
     },
     "Just": {
       "extension": "just",
@@ -1717,7 +1967,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "just"
+      "grammar": "just",
+      "query_files": 669
     },
     "MDX": {
       "extension": "mdx",
@@ -1730,7 +1981,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "mdx"
+      "grammar": "mdx",
+      "query_files": 571
     },
     "Make": {
       "extension": "make",
@@ -1748,7 +2000,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "make"
+      "grammar": "make",
+      "query_files": 159
     },
     "PHP": {
       "extension": "php",
@@ -1756,13 +2009,15 @@
       "matcher": {
         "path_suffixes": [
           "php",
-          "phtml"
+          "phtml",
+          "phpt"
         ],
         "first_line_pattern": "^#!.*php",
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "php"
+      "grammar": "php",
+      "query_files": 959
     },
     "PHPDoc": {
       "extension": "php",
@@ -1773,7 +2028,8 @@
         "modeline_aliases": []
       },
       "hidden": true,
-      "grammar": "phpdoc"
+      "grammar": "phpdoc",
+      "query_files": 1
     },
     "Prisma": {
       "extension": "prisma",
@@ -1786,7 +2042,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "prisma"
+      "grammar": "prisma",
+      "query_files": 533
     },
     "Properties": {
       "extension": "java",
@@ -1799,7 +2056,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "properties"
+      "grammar": "properties",
+      "query_files": 33
     },
     "RBS": {
       "extension": "ruby",
@@ -1812,7 +2070,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "rbs"
+      "grammar": "rbs",
+      "query_files": 25
     },
     "Rainbow CSV (,)": {
       "extension": "rainbow-csv",
@@ -1825,7 +2084,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "csv"
+      "grammar": "csv",
+      "query_files": 1
     },
     "Rainbow CSV (;)": {
       "extension": "rainbow-csv",
@@ -1836,7 +2096,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "ssv"
+      "grammar": "ssv",
+      "query_files": 1
     },
     "Rainbow CSV (|)": {
       "extension": "rainbow-csv",
@@ -1847,7 +2108,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "psv"
+      "grammar": "psv",
+      "query_files": 1
     },
     "Rainbow TSV (⭲)": {
       "extension": "rainbow-csv",
@@ -1860,7 +2122,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "tsv"
+      "grammar": "tsv",
+      "query_files": 1
     },
     "Ruby": {
       "extension": "ruby",
@@ -1911,7 +2174,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "ruby"
+      "grammar": "ruby",
+      "query_files": 959
     },
     "SQL": {
       "extension": "sql",
@@ -1924,7 +2188,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "sql"
+      "grammar": "sql",
+      "query_files": 539
     },
     "Swift": {
       "extension": "swift",
@@ -1938,7 +2203,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "swift"
+      "grammar": "swift",
+      "query_files": 671
     },
     "TOML": {
       "extension": "toml",
@@ -1954,7 +2220,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "toml"
+      "grammar": "toml",
+      "query_files": 639
     },
     "Vue.js": {
       "extension": "vue",
@@ -1967,7 +2234,22 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "vue"
+      "grammar": "vue",
+      "query_files": 63
+    },
+    "XML": {
+      "extension": "xml",
+      "path": "languages/xml",
+      "matcher": {
+        "path_suffixes": [
+          "xml"
+        ],
+        "first_line_pattern": "^<.*xml",
+        "modeline_aliases": []
+      },
+      "hidden": false,
+      "grammar": "xml",
+      "query_files": 13
     },
     "YAML+ERB": {
       "extension": "ruby",
@@ -1981,7 +2263,8 @@
         "modeline_aliases": []
       },
       "hidden": false,
-      "grammar": "embedded_template"
+      "grammar": "embedded_template",
+      "query_files": 17
     }
   }
 }
