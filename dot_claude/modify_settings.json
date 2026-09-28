@@ -1,0 +1,9 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- $settings := dict -}}
+{{- if .chezmoi.stdin -}}
+{{-   $settings = fromJson .chezmoi.stdin -}}
+{{- end -}}
+{{- range $key, $value := .claude_settings -}}
+{{-   $settings = setValueAtPath $key $value $settings -}}
+{{- end -}}
+{{ toPrettyJson $settings }}
