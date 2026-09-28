@@ -1,14 +1,17 @@
+[settings]
+install_before = "1d"
+
 [tools]
 # Languages
 node = "26"
-java = "26"
+java = "27"
 python = "3.14"
 
 # package manager
-bun = "1"
-yarn = "4"
-uv = "0.11"
-pnpm = "11"
+bun = "1.4.2"
+yarn = "4.18.1"
+uv = "0.12.19"
+pnpm = "12.6.0"
 
 # CLI
 gh = "latest"
@@ -21,12 +24,14 @@ chezmoi = "latest"
 lazygit = "latest"
 portless = "latest"
 prettier = "latest"
+sshuttle = "latest"
+xcodegen = "latest"
 1password = "latest"
+"cloud-sql-proxy" = "latest"
 
 # Coding Tools
 codex = "latest"
 claude = "latest"
-opencode = "latest"
 
 # Tools
 yq = "latest"
@@ -36,6 +41,8 @@ eza = "latest"
 just = "latest"
 doggo = "latest"
 ripgrep = "latest"
+"aqua:minio/mc" = "latest"
+"pipx:pygments" = "latest"
 "npm:prettier-pnp" = "latest"
 "aqua:ast-grep/ast-grep" = "latest"
 
