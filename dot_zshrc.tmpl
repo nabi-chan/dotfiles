@@ -1,4 +1,5 @@
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+typeset -U path
+
 [ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
 
 # Plugins
@@ -32,3 +33,4 @@ if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
 {{- end }}
 fi
 
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local

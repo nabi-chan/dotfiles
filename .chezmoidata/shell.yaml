@@ -1,8 +1,4 @@
 aliases:
-  # ANSI color
-  dig: doggo
-  # shortcuts
-  code: zed
   lg: lazygit
   j: just
   jg: just -g
@@ -10,13 +6,9 @@ aliases:
   gpv: gh pr view
   gpm: gh pr merge && git pull --ff-only
   gos: open -na Ghostty.app
-  # opencode
-  oc: opencode
-  ocr: oc --resume
-  occ: oc --continue
 
-# ghostty 에서만 적용 (에이전트 등 비대화형 셸에서 ANSI 색상 출력 방지)
 ghostty_aliases:
+  dig: doggo
   cat: pygmentize -g
   ls: eza
 
@@ -25,7 +17,6 @@ environment:
   BUN_INSTALL: $HOME/.bun
   PNPM_HOME: $HOME/Library/pnpm
   ANDROID_HOME: $HOME/Library/Android/sdk
-  MISE_HOME: $HOME/.local/share/mise/shims
 
   # zplug
   ZPLUG_HOME: $HOMEBREW_PREFIX/opt/zplug
@@ -38,13 +29,11 @@ environment:
   SSH_AUTH_SOCK: $HOME/.1password/agent.sock
 
   # claude
-  CAVEMAN_DEFAULT_MODE: ultra
   ANTHROPIC_ENABLE_1M_CONTEXT: true
 
 paths:
   # global paths
   - $PNPM_HOME
-  - $MISE_HOME
   - $BUN_INSTALL/bin
   - $HOME/.local/bin
   # android studio
