@@ -1,0 +1,11 @@
+#!/bin/bash
+set -euo pipefail
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(mise activate bash --shims)"
+
+{{ range .skill_sources -}}
+pnpm dlx skills@{{ $.skills_cli_version }} add {{ .source | quote }} -g -y \
+  --skill {{ range .skills }}{{ . | quote }} {{ end }}\
+  --agent {{ range .agents }}{{ . | quote }} {{ end }}
+{{ end -}}

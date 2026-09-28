@@ -1,0 +1,55 @@
+skills_cli_version: 1.7.0
+
+skill_sources:
+  - source: stablyai/orca
+    skills: ["*"]
+    agents: [claude-code, universal]
+
+  - source: uxjoseph/supanova-design-skill
+    skills:
+      - supanova-design-engine
+      - supanova-full-output
+      - supanova-premium-aesthetic
+      - supanova-redesign-engine
+    agents: [claude-code, universal]
+
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    skills: [ui-ux-pro-max]
+    agents: [claude-code, universal]
+
+  - source: obra/superpowers
+    skills: ["*"]
+    agents: [universal]
+
+  - source: vercel-labs/skills
+    skills: [find-skills]
+    agents: [universal]
+
+  - source: anthropics/skills
+    skills: [frontend-design]
+    agents: [universal]
+
+  - source: phuryn/pm-skills
+    skills:
+      - brainstorm-okrs
+      - create-prd
+      - dummy-dataset
+      - job-stories
+      - outcome-roadmap
+      - pre-mortem
+      - prioritization-frameworks
+      - release-notes
+      - retro
+      - sprint-plan
+      - stakeholder-map
+      - strategy-red-team
+      - summarize-meeting
+      - test-scenarios
+      - user-stories
+      - wwas
+      - marketing-ideas
+      - north-star-metric
+      - positioning-ideas
+      - product-name
+      - value-prop-statements
+    agents: [universal]
