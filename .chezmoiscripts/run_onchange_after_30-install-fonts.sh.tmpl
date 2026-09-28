@@ -1,0 +1,8 @@
+#!/bin/bash
+{{- range (glob (joinPath .chezmoi.sourceDir ".system-fonts/**/*.[ot]tf")) }}
+# {{ base . }}
+{{- end }}
+set -euo pipefail
+
+find {{ joinPath .chezmoi.sourceDir ".system-fonts" | quote }} -type f \( -name '*.ttf' -o -name '*.otf' \) \
+  -exec cp -n {} "$HOME/Library/Fonts/" \;
