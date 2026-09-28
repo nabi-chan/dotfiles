@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "better-chezmoi": {
+      "source": "jpcaparas/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/better-chezmoi/SKILL.md",
+      "computedHash": "103e4cbfe3b41b56ccced1f04411418ea7193c940cc8be30981d9aa50e0d3705"
+    }
+  }
+}
