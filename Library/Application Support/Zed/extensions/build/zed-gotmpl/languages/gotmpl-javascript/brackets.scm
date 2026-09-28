@@ -1,1 +1,0 @@
-../gotmpl/brackets.scm

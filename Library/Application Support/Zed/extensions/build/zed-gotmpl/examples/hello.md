@@ -1,3 +1,0 @@
-```gotmpl
-Hello, {{.Subject}}!
-```
