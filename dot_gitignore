@@ -9,8 +9,7 @@
 *.local.*
 
 # agents
-.omo/
 .omc/
-.sisyphus/
 .codegraph/
 .playwright-mcp/
+.orca*/
