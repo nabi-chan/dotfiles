@@ -1,0 +1,13 @@
+mcp_servers:
+  chrome-devtools:
+    command: chrome-devtools-mcp
+    args: [--slim, --headless]
+  dbhub:
+    command: dbhub
+    args: [--config, ~/.config/dbhub/config.toml]
+
+codex_mcp_servers:
+  context7:
+    url: https://mcp.context7.com/mcp
+  openaiDeveloperDocs:
+    url: https://developers.openai.com/mcp

@@ -1,0 +1,11 @@
+{{- $decisions := dict "allow" "allow" "ask" "prompt" "deny" "forbidden" -}}
+{{- range $kind, $decision := $decisions -}}
+{{-   range (get $.claude_settings.permissions $kind | default list) -}}
+{{-     if hasPrefix "Bash(" . }}
+prefix_rule(
+    pattern = {{ . | trimPrefix "Bash(" | trimSuffix ")" | trimSuffix ":*" | splitList " " | toJson }},
+    decision = "{{ $decision }}",
+)
+{{     end -}}
+{{-   end -}}
+{{- end -}}

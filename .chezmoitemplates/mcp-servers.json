@@ -1,0 +1,8 @@
+{{- $home := printf "%s/" .chezmoi.homeDir -}}
+{{- $servers := dict -}}
+{{- range $name, $server := .mcp_servers -}}
+{{-   $args := list -}}
+{{-   range $server.args }}{{ $args = append $args (replace "~/" $home .) }}{{ end -}}
+{{-   $_ := set $servers $name (dict "command" $server.command "args" $args) -}}
+{{- end -}}
+{{ toJson $servers }}

@@ -1,0 +1,17 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- $config := dict -}}
+{{- if .chezmoi.stdin -}}
+{{-   $config = fromToml .chezmoi.stdin -}}
+{{- end -}}
+{{- $servers := includeTemplate "mcp-servers.json" . | fromJson -}}
+{{- range $name, $server := .codex_mcp_servers -}}
+{{-   $_ := set $servers $name $server -}}
+{{- end -}}
+{{- $config = setValueAtPath "mcp_servers" $servers $config -}}
+{{- $home := printf "%s/" .chezmoi.homeDir -}}
+{{- $roots := list -}}
+{{- range .claude_settings.permissions.additionalDirectories -}}
+{{-   $roots = append $roots (replace "~/" $home . | trimSuffix "/") -}}
+{{- end -}}
+{{- $config = setValueAtPath "sandbox_workspace_write.writable_roots" $roots $config -}}
+{{ toToml $config }}
