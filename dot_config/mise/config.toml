@@ -32,6 +32,7 @@ xcodegen = "latest"
 # Coding Tools
 codex = "latest"
 claude = "latest"
+"aqua:google-antigravity/antigravity-cli" = "latest"
 
 # Tools
 yq = "latest"
