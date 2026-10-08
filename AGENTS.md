@@ -55,7 +55,7 @@ Run in name order after files are applied. Each re-runs only when its rendered c
 | Agent persona/rules (all tools) | `dot_config/agent/AGENTS.md` | Single source for Claude Code, Codex, and OpenCode; all three tool paths are symlinks to it. Do not repurpose as repo docs. |
 | Agent skills | `.chezmoidata/skills.yaml` | External skill deps installed with `--agent universal` into `~/.agents/skills` (read directly by Codex, OpenCode, Cursor, Gemini CLI, etc.; OpenCode also reads `~/.claude/skills`); `claude-code` is added only to get `~/.claude/skills` symlinks. Skills shipped as Claude plugins omit `claude-code` from `agents` and are enabled in `.chezmoidata/claude.yaml` instead. |
 | Repo-local skills | `.agents/skills/`, `skills-lock.json` | Project-scope `pnpm dlx skills add` (e.g. `better-chezmoi`) plus hand-written `brewfile-backup` (not in the lock); `.claude/skills/*` are symlinks. Restore with `pnpm dlx skills experimental_install`. |
-| Private app configs | `dot_omlx/`, `dot_config/*private*` | Treat as sensitive even if tracked. |
+| Private app configs | `dot_omlx/`, `dot_config/*private*` | Treat as sensitive even if tracked. `dot_omlx/modify_private_settings.json` embeds the managed keys inline; app-added keys (`usage`, `ui.dashboard_layout`, new defaults) stay app-owned. `model_settings.json` is a plain snapshot (refresh with `chezmoi re-add`). |
 | Fonts | `.system-fonts/` | Binary assets; avoid text search/line-count assumptions. |
 
 ## CONVENTIONS
@@ -66,7 +66,7 @@ Run in name order after files are applied. Each re-runs only when its rendered c
 - No CI/test/lint pipeline; verify with `chezmoi diff`, `chezmoi execute-template`, `bash -n`/`zsh -n`, and targeted CLI runs.
 - Tool-side rule paths are chezmoi `symlink_*` sources; edit the real file under `dot_config/agent/` only.
 - Skills are not vendored. Add/remove them in `.chezmoidata/skills.yaml`; prefer a Claude plugin over linking the skill to `claude-code` when one exists.
-- App-owned configs that apps rewrite constantly (CodexBar, OrbStack, Docker `config.json`; Codex `config.toml`/`~/.claude.json`/OpenCode `opencode.jsonc` only partially via modify-templates) are intentionally not managed.
+- App-owned configs that apps rewrite constantly (CodexBar, OrbStack, Docker `config.json`; Codex `config.toml`/`~/.claude.json`/OpenCode `opencode.jsonc`/omlx `settings.json` only partially via modify-templates) are intentionally not managed.
 
 ## ANTI-PATTERNS (THIS PROJECT)
 
@@ -92,4 +92,4 @@ pnpm dlx skills list -g
 
 ## NOTES
 
-- `dot_omlx/settings.json` holds a local-only omlx key in plaintext by choice; summarize presence, not values.
+- `dot_omlx/modify_private_settings.json` holds local-only omlx keys in plaintext by choice; summarize presence, not values.

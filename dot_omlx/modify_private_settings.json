@@ -1,7 +1,10 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- /* 아래 키만 관리하고, 앱이 추가하는 키(usage, ui.dashboard_layout 등)는 그대로 둠 */ -}}
+{{- $managed := fromJson `
 {
   "version": "1.0",
   "server": {
-    "host": "127.0.0.1",
+    "host": "0.0.0.0",
     "port": 8000,
     "log_level": "info",
     "cors_origins": [
@@ -51,7 +54,7 @@
   "auth": {
     "api_key": "omlx-9j0muft02xni8dch",
     "secret_key": "1d72cd1ad4379af5291f7aeb8f6766d456e0688921d9fbb97a507fee5dca449b",
-    "skip_api_key_verification": true,
+    "skip_api_key_verification": false,
     "sub_keys": []
   },
   "mcp": {
@@ -84,8 +87,6 @@
     "retention_days": 7
   },
   "claude_code": {
-    "context_scaling_enabled": false,
-    "target_context_size": 200000,
     "mode": "cloud",
     "opus_model": null,
     "sonnet_model": null,
@@ -112,3 +113,18 @@
     "idle_timeout_seconds": null
   }
 }
+` -}}
+{{- $settings := dict -}}
+{{- if .chezmoi.stdin -}}
+{{-   $settings = fromJson .chezmoi.stdin -}}
+{{- end -}}
+{{- range $section, $values := $managed -}}
+{{-   if kindIs "map" $values -}}
+{{-     range $key, $value := $values -}}
+{{-       $settings = setValueAtPath (list $section $key) $value $settings -}}
+{{-     end -}}
+{{-   else -}}
+{{-     $settings = setValueAtPath $section $values $settings -}}
+{{-   end -}}
+{{- end -}}
+{{ toPrettyJson $settings }}
