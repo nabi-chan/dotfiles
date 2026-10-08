@@ -28,7 +28,9 @@ claude_settings:
         source: github
         repo: phuryn/pm-skills
   language: 한국어
-  fastMode: true
+  fastMode: false
+  effortLevel: xhigh
+  ultracode: true
   askUserQuestionTimeout: 10m
   dialogExpiry: 10m
   tui: fullscreen
