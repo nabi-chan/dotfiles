@@ -1,0 +1,17 @@
+# modify-template이 이 최상위 키만 덮어씀. mcp, permission은 공용 데이터에서 생성
+opencode_settings:
+  $schema: https://opencode.ai/config.json
+  provider:
+    omlx:
+      name: oMLX
+      npm: "@ai-sdk/openai-compatible"
+      options:
+        baseURL: http://127.0.0.1:8000/v1
+        modelsDiscovery:
+          enabled: true
+          modelInfoFormat: lmstudio
+
+# plugin 배열에 없을 때만 추가. Orca가 넣는 file:// 플러그인 등 나머지 항목은 유지
+opencode_plugins:
+  - opencode-models-discovery@latest
+  - superpowers@git+https://github.com/obra/superpowers.git

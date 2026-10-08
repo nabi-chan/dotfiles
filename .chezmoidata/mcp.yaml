@@ -11,3 +11,7 @@ codex_mcp_servers:
     url: https://mcp.context7.com/mcp
   openaiDeveloperDocs:
     url: https://developers.openai.com/mcp
+
+opencode_mcp_servers:
+  context7:
+    url: https://mcp.context7.com/mcp

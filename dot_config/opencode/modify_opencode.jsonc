@@ -1,0 +1,36 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- $config := dict -}}
+{{- if .chezmoi.stdin -}}
+{{-   $config = fromJsonc .chezmoi.stdin -}}
+{{- end -}}
+{{- range $key, $value := .opencode_settings -}}
+{{-   $config = setValueAtPath $key $value $config -}}
+{{- end -}}
+{{- $plugins := get $config "plugin" | default list -}}
+{{- range .opencode_plugins -}}
+{{-   if not (has . $plugins) }}{{ $plugins = append $plugins . }}{{ end -}}
+{{- end -}}
+{{- $config = setValueAtPath "plugin" $plugins $config -}}
+{{- $mcp := dict -}}
+{{- range $name, $server := includeTemplate "mcp-servers.json" . | fromJson -}}
+{{-   $_ := set $mcp $name (dict "type" "local" "command" (prepend $server.args $server.command)) -}}
+{{- end -}}
+{{- range $name, $server := .opencode_mcp_servers -}}
+{{-   $_ := set $mcp $name (dict "type" "remote" "url" $server.url) -}}
+{{- end -}}
+{{- $config = setValueAtPath "mcp" $mcp $config -}}
+{{- /* Claude permissions 미러링: Bash(cmd:*) → "cmd *", additionalDirectories → external_directory */ -}}
+{{- $bash := dict -}}
+{{- range $decision := list "allow" "ask" "deny" -}}
+{{-   range (get $.claude_settings.permissions $decision | default list) -}}
+{{-     if hasPrefix "Bash(" . -}}
+{{-       $_ := set $bash (regexReplaceAll ":\\*$" (. | trimPrefix "Bash(" | trimSuffix ")") " *") $decision -}}
+{{-     end -}}
+{{-   end -}}
+{{- end -}}
+{{- $dirs := dict -}}
+{{- range .claude_settings.permissions.additionalDirectories -}}
+{{-   $_ := set $dirs (printf "%s/**" (trimSuffix "/" .)) "allow" -}}
+{{- end -}}
+{{- $config = setValueAtPath "permission" (dict "bash" $bash "external_directory" $dirs) $config -}}
+{{ toPrettyJson $config }}
