@@ -1,0 +1,11 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- $config := dict -}}
+{{- if .chezmoi.stdin -}}
+{{-   $config = fromJson .chezmoi.stdin -}}
+{{- end -}}
+{{- $servers := includeTemplate "mcp-servers.json" . | fromJson -}}
+{{- range $name, $server := .antigravity_mcp_servers -}}
+{{-   $_ := set $servers $name (dict "url" $server.url) -}}
+{{- end -}}
+{{- $config = setValueAtPath "mcpServers" $servers $config -}}
+{{ toPrettyJson $config }}

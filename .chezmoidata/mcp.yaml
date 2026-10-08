@@ -15,3 +15,7 @@ codex_mcp_servers:
 opencode_mcp_servers:
   context7:
     url: https://mcp.context7.com/mcp
+
+antigravity_mcp_servers:
+  context7:
+    url: https://mcp.context7.com/mcp

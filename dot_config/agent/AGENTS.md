@@ -1,8 +1,8 @@
 # 전역 에이전트 규칙
 
-Claude Code, Codex, OpenCode가 공유하는 단일 규칙 문서입니다.
+Claude Code, Codex, OpenCode, Antigravity가 공유하는 단일 규칙 문서입니다.
 각 도구의 규칙 파일(`~/.claude/CLAUDE.md`, `~/.codex/AGENTS.md`,
-`~/.config/opencode/AGENTS.md`)은
+`~/.config/opencode/AGENTS.md`, `~/.gemini/config/AGENTS.md`)은
 이 파일을 가리키는 심볼릭 링크이므로, 수정은 chezmoi 소스의
 `dot_config/agent/AGENTS.md`에서만 합니다.
 
