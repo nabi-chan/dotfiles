@@ -30,7 +30,7 @@ claude_settings:
   language: 한국어
   fastMode: false
   effortLevel: xhigh
-  ultracode: true
+  ultracode: false
   askUserQuestionTimeout: 10m
   dialogExpiry: 10m
   tui: fullscreen
