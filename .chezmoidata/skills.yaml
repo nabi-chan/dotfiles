@@ -17,6 +17,10 @@ skill_sources:
     skills: [ui-ux-pro-max]
     agents: [claude-code, universal]
 
+  - source: morluto/rea
+    skills: [reverse-engineer-anything]
+    agents: [claude-code, universal]
+
   - source: obra/superpowers
     skills: ["*"]
     agents: [universal]
