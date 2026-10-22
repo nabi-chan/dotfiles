@@ -5,10 +5,19 @@ mcp_servers:
   dbhub:
     command: dbhub
     args: [--config, ~/.config/dbhub/config.toml]
+  rea:
+    command: rea
+    args: [mcp]
 
 codex_mcp_servers:
   context7:
     url: https://mcp.context7.com/mcp
+  # Codex 기본 타임아웃(시작 10초, 호출 60초)은 rea 분석에 짧아서 rea setup 권장값으로 덮어씀
+  rea:
+    command: rea
+    args: [mcp]
+    startup_timeout_sec: 30
+    tool_timeout_sec: 450
   openaiDeveloperDocs:
     url: https://developers.openai.com/mcp
 

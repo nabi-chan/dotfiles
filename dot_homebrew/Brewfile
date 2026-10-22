@@ -7,6 +7,7 @@ tap "steipete/tap", trusted: true
 brew "zstd"
 brew "cocoapods"
 brew "ffmpeg"
+brew "ghidra"
 brew "git"
 brew "gnupg"
 brew "jdtls"

@@ -49,6 +49,7 @@ ripgrep = "latest"
 "npm:@bytebase/dbhub" = "latest"
 "npm:computer-use-mcp" = "latest"
 "npm:chrome-devtools-mcp" = "latest"
+"npm:rea-agents" = "latest"
 
 # Ghostty
 starship = "latest"
