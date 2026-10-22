@@ -62,7 +62,7 @@ Run in name order after files are applied. Each re-runs only when its rendered c
 ## CONVENTIONS
 
 - Edit chezmoi source names (`dot_zshrc.tmpl`, `dot_config/...`), not rendered home paths.
-- `.chezmoiignore` excludes `*.local`; use that suffix for machine-local files (`~/.zshrc.local`, `~/.ssh/config.local`, `dot_config/dbhub/config.local.toml`). Exception: `~/.ssh/config.local` is un-ignored and seeded once by `dot_ssh/create_private_config.local`.
+- `.chezmoiignore` excludes `*.local`; use that suffix for machine-local files (`~/.zshrc.local`, `~/.ssh/config.local`, `dot_config/dbhub/config.local.toml`, optional and included only when present). Exception: `~/.ssh/config.local` is un-ignored and seeded once by `dot_ssh/create_private_config.local`.
 - zsh templates use chezmoi Go-template ranges over `.environment`, `.paths`, `.aliases`, `.ghostty_aliases`, and `.zplug_plugins`.
 - No CI/test/lint pipeline; verify with `chezmoi diff`, `chezmoi execute-template`, `bash -n`/`zsh -n`, and targeted CLI runs.
 - Tool-side rule paths are chezmoi `symlink_*` sources; edit the real file under `dot_config/agent/` only.

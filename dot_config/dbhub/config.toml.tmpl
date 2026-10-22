@@ -8,4 +8,7 @@ lazy = true
 id = "postgres.local"
 dsn = "postgres://eunsol:eunsol@postgresql.container.orb.local:5432"
 
+{{/* config.local.toml 은 gitignore 대상이라 새로 clone 한 소스에는 없을 수 있음 */ -}}
+{{ if stat (joinPath .chezmoi.sourceDir "dot_config/dbhub/config.local.toml") -}}
 {{ include "dot_config/dbhub/config.local.toml" }}
+{{ end -}}
