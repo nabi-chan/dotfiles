@@ -36,6 +36,8 @@ paths:
   - $PNPM_HOME
   - $BUN_INSTALL/bin
   - $HOME/.local/bin
+  # omlx cli shim
+  - $HOME/.omlx/bin
   # android studio
   - $ANDROID_HOME/tools
   - $ANDROID_HOME/tools/bin
