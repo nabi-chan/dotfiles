@@ -3,8 +3,8 @@
 set -euo pipefail
 
 if [ ! -x /opt/homebrew/bin/brew ]; then
-  echo "Homebrew 가 없어서 중단함. https://brew.sh 로 설치한 뒤 다시 chezmoi apply" >&2
-  exit 1
+  echo "Homebrew 가 없어서 먼저 설치함" >&2
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 

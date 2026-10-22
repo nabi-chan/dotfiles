@@ -1,6 +1,6 @@
 # PROJECT KNOWLEDGE BASE
 
-**Updated:** 2026-10-08
+**Updated:** 2026-10-22
 **Branch:** main
 
 ## OVERVIEW
@@ -33,7 +33,7 @@ Run in name order after files are applied. Each re-runs only when its rendered c
 
 | Script | Trigger | Does |
 |--------|---------|------|
-| `10-brew-bundle` | Brewfile hash | `brew bundle install --no-upgrade` (fails if Homebrew is missing) |
+| `10-brew-bundle` | Brewfile hash | `brew bundle install --no-upgrade` (installs Homebrew first via the official script if missing) |
 | `20-mise-install` | `dot_config/mise/config.toml` hash | `mise install --yes` |
 | `30-install-fonts` | `.system-fonts` file list | copies missing fonts to `~/Library/Fonts` (`cp -n`) |
 | `40-install-agent-skills` | `.chezmoidata/skills.yaml` | `pnpm dlx skills@<skills_cli_version> add -g` per source |
