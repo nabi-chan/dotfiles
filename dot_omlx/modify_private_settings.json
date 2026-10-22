@@ -24,9 +24,9 @@
   },
   "model": {
     "model_dirs": [
-      "/Users/eunsol/.omlx/models"
+      "/Users/eunsol.chan/.omlx/models"
     ],
-    "model_dir": "/Users/eunsol/.omlx/models",
+    "model_dir": "/Users/eunsol.chan/.omlx/models",
     "model_fallback": false
   },
   "memory": {
@@ -46,7 +46,7 @@
   "cache": {
     "enabled": true,
     "hot_cache_only": false,
-    "ssd_cache_dir": "/Users/eunsol/.omlx/cache",
+    "ssd_cache_dir": "/Users/eunsol.chan/.omlx/cache",
     "ssd_cache_max_size": "372GB",
     "hot_cache_max_size": "16GB",
     "initial_cache_blocks": 256
