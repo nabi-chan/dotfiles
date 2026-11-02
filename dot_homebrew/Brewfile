@@ -11,11 +11,15 @@ brew "ghidra"
 brew "git"
 brew "gnupg"
 brew "jdtls"
+brew "mas"
 brew "mise"
 brew "mole"
+brew "pdfcraft-cli"
 brew "poppler"
+brew "sevenzip"
 brew "sshpass"
 brew "tree"
+brew "upx"
 brew "watchman"
 brew "zplug"
 brew "jundot/omlx/omlx"
@@ -43,11 +47,13 @@ cask "obsidian"
 cask "openlogi"
 cask "orbstack"
 cask "stablyai/orca/orca", trusted: true
+cask "pdfcraft"
 cask "raycast"
 cask "setapp"
 cask "slack"
 cask "steam"
 cask "tailscale-app"
+cask "utm"
 cask "visual-studio-code"
 cask "xcodes-app"
 cask "yubico-authenticator"
@@ -56,7 +62,7 @@ cask "yubico-authenticator"
 mas "1Password for Safari", id: 1569813296
 mas "Draw Things", id: 6444050820
 mas "FileZilla Pro", id: 1298486723
-mas "KakaoTalkNew", id: 869223134
+mas "KakaoTalkWork", id: 869223134
 mas "Keynote", id: 361285480
 mas "Magnet", id: 441258766
 mas "Microsoft Excel", id: 462058435

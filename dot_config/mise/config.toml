@@ -12,7 +12,6 @@ pnpm = "12.6.0"
 
 # CLI
 gh = "latest"
-mas = "latest"
 turbo = "latest"
 mysql = "latest"
 flyway = "latest"
