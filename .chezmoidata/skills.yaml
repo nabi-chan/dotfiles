@@ -21,6 +21,10 @@ skill_sources:
     skills: [reverse-engineer-anything]
     agents: [claude-code, universal]
 
+  - source: chrisryugj/korean-law-mcp
+    skills: [korean-law]
+    agents: [claude-code, universal]
+
   - source: obra/superpowers
     skills: ["*"]
     agents: [universal]
